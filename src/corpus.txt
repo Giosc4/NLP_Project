@@ -1,0 +1,14 @@
+avanti
+indietro
+sinistra
+destra
+cammina
+corri
+fermo
+salta
+vola
+su
+giù
+pausa
+continua
+esci

@@ -1,0 +1,103 @@
+name: AudioClassificationModel
+model:
+  sample_rate: 16000
+  labels:
+    - avanti
+    - cammina
+    - continua
+    - corri
+    - destra
+    - esci
+    - fermo
+    - giu
+    - indietro
+    - pausa
+    - salta
+    - sinistra
+    - su
+    - vola
+
+  preprocessor:
+    cls: nemo.collections.asr.modules.AudioToMelSpectrogramPreprocessor
+    params:
+      sample_rate: 16000
+      window_size: 0.02
+      window_stride: 0.01
+      n_fft: 320
+      features: 64
+      normalize: "per_feature"
+
+  encoder:
+    cls: nemo.collections.asr.modules.ConvASREncoder
+    params:
+      jasper:
+        - filters: 256
+          repeat: 1
+          kernel: [11]
+          stride: [1]
+          dilation: [1]
+          dropout: 0.2
+          residual: false
+          separable: true
+      activation: "relu"
+      feat_in: 64
+
+  decoder:
+    cls: nemo.collections.asr.modules.ConvASRDecoderClassification
+    params:
+      feat_in: 256
+      num_classes: 14
+
+  train_ds:
+    manifest_filepath: "/home/giolinux/NLP_Project/train_manifest.json"
+    batch_size: 16
+    shuffle: true
+    num_workers: 4
+    sample_rate: 16000  # Aggiungi questa riga
+    labels:
+      - avanti
+      - cammina
+      - continua
+      - corri
+      - destra
+      - esci
+      - fermo
+      - giu
+      - indietro
+      - pausa
+      - salta
+      - sinistra
+      - su
+      - vola
+
+  validation_ds:
+    manifest_filepath: "/home/giolinux/NLP_Project/val_manifest.json"
+    batch_size: 16
+    shuffle: false
+    num_workers: 4
+    sample_rate: 16000  # Aggiungi questa riga
+    labels:
+      - avanti
+      - cammina
+      - continua
+      - corri
+      - destra
+      - esci
+      - fermo
+      - giu
+      - indietro
+      - pausa
+      - salta
+      - sinistra
+      - su
+      - vola
+
+  optim:
+    name: "adam"
+    lr: 0.001
+
+trainer:
+  accelerator: "gpu"  # Usa "cpu" se non hai una GPU
+  devices: 1
+  max_epochs: 10
+  logger: true
