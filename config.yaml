@@ -1,21 +1,21 @@
-name: AudioClassificationModel
+name: ASR_Project
 model:
   sample_rate: 16000
-  labels:
+  labels:  # Definizione globale di etichette
     - avanti
-    - cammina
-    - continua
-    - corri
-    - destra
-    - esci
-    - fermo
-    - giu
     - indietro
-    - pausa
-    - salta
     - sinistra
-    - su
+    - destra
+    - cammina
+    - corri
+    - fermo
+    - salta
     - vola
+    - su
+    - giu
+    - pausa
+    - continua
+    - esci
 
   preprocessor:
     cls: nemo.collections.asr.modules.AudioToMelSpectrogramPreprocessor
@@ -31,73 +31,78 @@ model:
     cls: nemo.collections.asr.modules.ConvASREncoder
     params:
       jasper:
-        - filters: 256
-          repeat: 1
-          kernel: [11]
+        - filters: 1024
+          repeat: 2
+          kernel: [13]
           stride: [1]
           dilation: [1]
-          dropout: 0.2
-          residual: false
+          dropout: 0.6
           separable: true
+          residual: true
       activation: "relu"
       feat_in: 64
 
   decoder:
     cls: nemo.collections.asr.modules.ConvASRDecoderClassification
     params:
-      feat_in: 256
+      feat_in: 1024
       num_classes: 14
 
   train_ds:
     manifest_filepath: "/home/giolinux/NLP_Project/train_manifest.json"
-    batch_size: 16
+    batch_size: 32
     shuffle: true
     num_workers: 4
-    sample_rate: 16000  # Aggiungi questa riga
-    labels:
+    sample_rate: 16000
+    labels:  # Definizione locale per train_ds
       - avanti
-      - cammina
-      - continua
-      - corri
-      - destra
-      - esci
-      - fermo
-      - giu
       - indietro
-      - pausa
-      - salta
       - sinistra
-      - su
+      - destra
+      - cammina
+      - corri
+      - fermo
+      - salta
       - vola
+      - su
+      - giu
+      - pausa
+      - continua
+      - esci
 
   validation_ds:
     manifest_filepath: "/home/giolinux/NLP_Project/val_manifest.json"
     batch_size: 16
     shuffle: false
     num_workers: 4
-    sample_rate: 16000  # Aggiungi questa riga
-    labels:
+    sample_rate: 16000
+    labels:  # Definizione locale per validation_ds
       - avanti
-      - cammina
-      - continua
-      - corri
-      - destra
-      - esci
-      - fermo
-      - giu
       - indietro
-      - pausa
-      - salta
       - sinistra
-      - su
+      - destra
+      - cammina
+      - corri
+      - fermo
+      - salta
       - vola
+      - su
+      - giu
+      - pausa
+      - continua
+      - esci
 
   optim:
-    name: "adam"
-    lr: 0.001
+    name: adamw
+    lr: 0.0005  # Learning rate aumentato
+    weight_decay: 0.01
+    sched:
+      name: CosineAnnealing
+      min_lr: 1e-5
+
 
 trainer:
-  accelerator: "gpu"  # Usa "cpu" se non hai una GPU
+  max_epochs: 100
+
+  accelerator: gpu
   devices: 1
-  max_epochs: 10
-  logger: true
