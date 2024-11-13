@@ -117,22 +117,22 @@ trainer:
   accelerator: gpu
   strategy: ddp
   accumulate_grad_batches: 1
-  enable_checkpointing: true
+  enable_checkpointing: false
   logger: true
   log_every_n_steps: 1
   val_check_interval: 1.0
   benchmark: false
 
 
-exp_manager:
-  exp_dir: ./experiments
-  name: asr_experiment
-  create_tensorboard_logger: true
-  create_checkpoint_callback: false
-  checkpoint_callback_params:
-    monitor: val_epoch_top@1
-    mode: max
-    save_top_k: 3
-    filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
+#exp_manager:
+  #exp_dir: ./experiments
+  #name: asr_experiment
+  #create_tensorboard_logger: true
+  #create_checkpoint_callback: false
+  #checkpoint_callback_params:
+    #monitor: val_epoch_top@1
+    #mode: max
+    #save_top_k: 3
+    #filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
 
  

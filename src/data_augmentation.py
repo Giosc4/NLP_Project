@@ -3,6 +3,7 @@ import librosa
 import numpy as np
 import soundfile as sf
 from scipy.signal import butter, lfilter
+import subprocess
 
 def add_background_noise(y, noise_factor=0.005):
     noise = np.random.randn(len(y))
@@ -67,8 +68,7 @@ def augment_data(input_dir, output_dir, sample_rate=16000):
                     aug_file = file.replace('.wav', f'{aug_suffix}.wav')
                     aug_file_path = os.path.join(output_subdir, aug_file)
                     sf.write(aug_file_path, aug_data, sr)
-                    
-                print(f"File processato: {file}")
+                                   
 
 if __name__ == "__main__":
     input_directory = '/home/giolinux/NLP_Project/audio'          # Sostituisci con il tuo percorso di input

@@ -1,6 +1,7 @@
 import os
 import json
 import librosa
+import random
 
 def create_manifest(data_dir, manifest_path):
     with open(manifest_path, 'w') as manifest_file:
@@ -13,7 +14,6 @@ def create_manifest(data_dir, manifest_path):
                     if "_" in file:
                         label = file.split("_")[1].split(".")[0]
                     else:
-                        # Se non ci sono underscore, utilizza il nome della directory superiore come etichetta
                         label = os.path.basename(os.path.dirname(file_path))
                     
                     # Calcola la durata del file audio
@@ -25,7 +25,36 @@ def create_manifest(data_dir, manifest_path):
                     }
                     manifest_file.write(json.dumps(entry) + '\n')
 
-# Esempio di utilizzo:
-data_dir = '/home/giolinux/NLP_Project/augmented_audio'  # Directory con i dati aumentati
-manifest_path = '/home/giolinux/NLP_Project/train_manifest_augmented.json'
-create_manifest(data_dir, manifest_path)
+def split_manifest(manifest_path, train_manifest_path, val_manifest_path, train_split=0.9):
+    with open(manifest_path, 'r') as f:
+        data = f.readlines()
+
+    # Mischia casualmente i dati
+    random.shuffle(data)
+
+    # Calcola la divisione in 80% training e 20% validation
+    split_idx = int(len(data) * train_split)
+    train_data = data[:split_idx]
+    val_data = data[split_idx:]
+
+    # Salva i dati di training
+    with open(train_manifest_path, 'w') as f_train:
+        f_train.writelines(train_data)
+
+    # Salva i dati di validazione
+    with open(val_manifest_path, 'w') as f_val:
+        f_val.writelines(val_data)
+
+    print(f"Divisione completata: {len(train_data)} campioni per il training, {len(val_data)} campioni per la validazione.")
+
+# Directory dei file audio originali
+data_dir = '/home/giolinux/NLP_Project/audio'
+# Percorsi per i manifest
+data_manifest_path = '/home/giolinux/NLP_Project/data_manifest.json'
+train_manifest_path = '/home/giolinux/NLP_Project/train_manifest.json'
+val_manifest_path = '/home/giolinux/NLP_Project/val_manifest.json'
+
+# Crea il manifest principale con i dati originali
+create_manifest(data_dir, data_manifest_path)
+# Crea manifest di training e validation
+split_manifest(data_manifest_path, train_manifest_path, val_manifest_path)
