@@ -1,7 +1,7 @@
 name: ASR_Project
 model:
   sample_rate: 16000
-  labels:  # Definizione globale di etichette
+  labels:
     - avanti
     - indietro
     - sinistra
@@ -18,43 +18,54 @@ model:
     - esci
 
   preprocessor:
-    cls: nemo.collections.asr.modules.AudioToMelSpectrogramPreprocessor
-    params:
-      sample_rate: 16000
-      window_size: 0.02
-      window_stride: 0.01
-      n_fft: 320
-      features: 64
-      normalize: "per_feature"
+    _target_: nemo.collections.asr.modules.AudioToMelSpectrogramPreprocessor
+    normalize: "per_feature"
+    window_size: 0.02
+    sample_rate: 16000
+    window_stride: 0.01
+    window: "hann"
+    features: 64
+    n_fft: 512
+    frame_splicing: 1
+    dither: 0.00001
+    stft_conv: false
+
 
   encoder:
-    cls: nemo.collections.asr.modules.ConvASREncoder
-    params:
-      jasper:
-        - filters: 1024
-          repeat: 2
-          kernel: [13]
-          stride: [1]
-          dilation: [1]
-          dropout: 0.6
-          separable: true
-          residual: true
-      activation: "relu"
-      feat_in: 64
+    _target_: nemo.collections.asr.modules.ConvASREncoder
+    feat_in: 64
+    activation: relu
+    conv_mask: true
+    jasper:
+    - filters: 256
+      repeat: 1
+      kernel: [11]
+      stride: [1]
+      dilation: [1]
+      dropout: 0.11590688029200186
+      residual: false
+    - filters: 256
+      repeat: 1
+      kernel: [13]
+      stride: [1]
+      dilation: [1]
+      dropout: 0.11590688029200186
+      residual: true
+
+
 
   decoder:
-    cls: nemo.collections.asr.modules.ConvASRDecoderClassification
-    params:
-      feat_in: 1024
-      num_classes: 14
+    _target_: nemo.collections.asr.modules.ConvASRDecoderClassification
+    feat_in: 256  # Deve corrispondere a `filters` dell'ultimo blocco dell'encoder
+    num_classes: 14
 
   train_ds:
-    manifest_filepath: "/home/giolinux/NLP_Project/train_manifest.json"
-    batch_size: 32
+    manifest_filepath: "/home/giolinux/NLP_Project/train_manifest_augmented.json"
+    batch_size: 8
     shuffle: true
     num_workers: 4
     sample_rate: 16000
-    labels:  # Definizione locale per train_ds
+    labels:
       - avanti
       - indietro
       - sinistra
@@ -72,11 +83,12 @@ model:
 
   validation_ds:
     manifest_filepath: "/home/giolinux/NLP_Project/val_manifest.json"
-    batch_size: 16
+    batch_size: 8
     shuffle: false
-    num_workers: 4
+    num_workers: 8
+    pin_memory: true
     sample_rate: 16000
-    labels:  # Definizione locale per validation_ds
+    labels:
       - avanti
       - indietro
       - sinistra
@@ -93,16 +105,34 @@ model:
       - esci
 
   optim:
-    name: adamw
-    lr: 0.0005  # Learning rate aumentato
-    weight_decay: 0.01
-    sched:
-      name: CosineAnnealing
-      min_lr: 1e-5
-
+    name: adam
+    lr: 0.0012424318997362363
+    weight_decay: 0.0001
 
 trainer:
-  max_epochs: 100
-
+  devices: 1  # number of GPUs
+  max_epochs: 100 
+  max_steps: -1
+  num_nodes: 1
   accelerator: gpu
-  devices: 1
+  strategy: ddp
+  accumulate_grad_batches: 1
+  enable_checkpointing: true
+  logger: true
+  log_every_n_steps: 1
+  val_check_interval: 1.0
+  benchmark: false
+
+
+exp_manager:
+  exp_dir: ./experiments
+  name: asr_experiment
+  create_tensorboard_logger: true
+  create_checkpoint_callback: false
+  checkpoint_callback_params:
+    monitor: val_epoch_top@1
+    mode: max
+    save_top_k: 3
+    filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
+
+ 

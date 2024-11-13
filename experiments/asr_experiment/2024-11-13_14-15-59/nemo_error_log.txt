@@ -1,0 +1,15 @@
+[NeMo W 2024-11-13 14:15:54 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:254: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+      def forward(
+    
+[NeMo W 2024-11-13 14:15:54 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:265: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+      def backward(ctx, grad_output):
+    
+[NeMo W 2024-11-13 14:15:54 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:325: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+      def forward(
+    
+[NeMo W 2024-11-13 14:15:54 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:360: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+      def backward(ctx, grad_output):
+    
+[NeMo W 2024-11-13 14:16:05 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    

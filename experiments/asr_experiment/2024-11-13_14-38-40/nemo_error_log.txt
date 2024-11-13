@@ -1,0 +1,21 @@
+[NeMo W 2024-11-13 14:38:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:254: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+      def forward(
+    
+[NeMo W 2024-11-13 14:38:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:265: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+      def backward(ctx, grad_output):
+    
+[NeMo W 2024-11-13 14:38:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:325: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+      def forward(
+    
+[NeMo W 2024-11-13 14:38:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:360: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+      def backward(ctx, grad_output):
+    
+[NeMo W 2024-11-13 14:38:44 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-13 14:38:45 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py:281: PossibleUserWarning: The number of training batches (13) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+      rank_zero_warn(
+    
+[NeMo W 2024-11-13 14:38:45 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py:212: UserWarning: You called `self.log('global_step', ...)` in your `training_step` but the value needs to be floating point. Converting it to torch.float32.
+      warning_cache.warn(
+    

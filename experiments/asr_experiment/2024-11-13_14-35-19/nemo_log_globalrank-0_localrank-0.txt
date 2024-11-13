@@ -1,0 +1,41 @@
+[NeMo W 2024-11-13 14:35:15 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:254: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+      def forward(
+    
+[NeMo W 2024-11-13 14:35:15 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:265: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+      def backward(ctx, grad_output):
+    
+[NeMo W 2024-11-13 14:35:15 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:325: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+      def forward(
+    
+[NeMo W 2024-11-13 14:35:15 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/megatron/core/tensor_parallel/layers.py:360: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+      def backward(ctx, grad_output):
+    
+[NeMo I 2024-11-13 14:35:19 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_14-35-19
+[NeMo I 2024-11-13 14:35:19 exp_manager:842] TensorboardLogger has been set up
+[NeMo I 2024-11-13 14:35:22 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-13 14:35:22 collections:446] Dataset loaded with 100 items, total duration of  0.02 hours.
+[NeMo I 2024-11-13 14:35:22 collections:448] # 100 files loaded accounting to # 9 labels
+[NeMo I 2024-11-13 14:35:23 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-13 14:35:23 collections:446] Dataset loaded with 26 items, total duration of  0.01 hours.
+[NeMo I 2024-11-13 14:35:23 collections:448] # 26 files loaded accounting to # 9 labels
+[NeMo I 2024-11-13 14:35:23 features:289] PADDING: 16
+[NeMo I 2024-11-13 14:35:23 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-13 14:35:23 collections:446] Dataset loaded with 100 items, total duration of  0.02 hours.
+[NeMo I 2024-11-13 14:35:23 collections:448] # 100 files loaded accounting to # 9 labels
+[NeMo I 2024-11-13 14:35:23 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-13 14:35:23 collections:446] Dataset loaded with 26 items, total duration of  0.01 hours.
+[NeMo I 2024-11-13 14:35:23 collections:448] # 26 files loaded accounting to # 9 labels
+[NeMo I 2024-11-13 14:35:25 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 0.0012424318997362363
+        maximize: False
+        weight_decay: 0.0001
+    )
+[NeMo I 2024-11-13 14:35:25 lr_scheduler:772] Scheduler not initialized as no `sched` config supplied to setup_optimizer()
