@@ -1,0 +1,95 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name         | Type                              | Params
+-------------------------------------------------------------------
+0 | preprocessor | AudioToMelSpectrogramPreprocessor | 0     
+1 | encoder      | ConvASREncoder                    | 567 K 
+2 | decoder      | ConvASRDecoderClassification      | 1.8 K 
+3 | loss         | CrossEntropyLoss                  | 0     
+4 | _accuracy    | TopKClassificationAccuracy        | 0     
+-------------------------------------------------------------------
+568 K     Trainable params
+0         Non-trainable params
+568 K     Total params
+2.275     Total estimated model params size (MB)
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using 16bit Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name         | Type                              | Params
+-------------------------------------------------------------------
+0 | preprocessor | AudioToMelSpectrogramPreprocessor | 0     
+1 | encoder      | ConvASREncoder                    | 2.1 M 
+2 | decoder      | ConvASRDecoderClassification      | 3.6 K 
+3 | loss         | CrossEntropyLoss                  | 0     
+4 | _accuracy    | TopKClassificationAccuracy        | 0     
+-------------------------------------------------------------------
+2.1 M     Trainable params
+0         Non-trainable params
+2.1 M     Total params
+8.483     Total estimated model params size (MB)
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using 16bit Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name         | Type                              | Params
+-------------------------------------------------------------------
+0 | preprocessor | AudioToMelSpectrogramPreprocessor | 0     
+1 | encoder      | ConvASREncoder                    | 1.5 M 
+2 | decoder      | ConvASRDecoderClassification      | 3.6 K 
+3 | loss         | CrossEntropyLoss                  | 0     
+4 | _accuracy    | TopKClassificationAccuracy        | 0     
+-------------------------------------------------------------------
+1.5 M     Trainable params
+0         Non-trainable params
+1.5 M     Total params
+5.857     Total estimated model params size (MB)
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using 16bit Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name         | Type                              | Params
+-------------------------------------------------------------------
+0 | preprocessor | AudioToMelSpectrogramPreprocessor | 0     
+1 | encoder      | ConvASREncoder                    | 1.7 M 
+2 | decoder      | ConvASRDecoderClassification      | 3.6 K 
+3 | loss         | CrossEntropyLoss                  | 0     
+4 | _accuracy    | TopKClassificationAccuracy        | 0     
+-------------------------------------------------------------------
+1.7 M     Trainable params
+0         Non-trainable params
+1.7 M     Total params
+6.779     Total estimated model params size (MB)
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using 16bit Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name         | Type                              | Params
+-------------------------------------------------------------------
+0 | preprocessor | AudioToMelSpectrogramPreprocessor | 0     
+1 | encoder      | ConvASREncoder                    | 2.1 M 
+2 | decoder      | ConvASRDecoderClassification      | 3.6 K 
+3 | loss         | CrossEntropyLoss                  | 0     
+4 | _accuracy    | TopKClassificationAccuracy        | 0     
+-------------------------------------------------------------------
+2.1 M     Trainable params
+0         Non-trainable params
+2.1 M     Total params
+8.483     Total estimated model params size (MB)
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]

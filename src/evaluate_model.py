@@ -73,6 +73,8 @@ class ASRInference:
         print(f"Totale file analizzati: {len(self.audio_paths)}")
         print(f"Predizioni corrette: {len(correct)}")
         print(f"Predizioni sbagliate: {len(incorrect)}\n")
+        print(f"Percentuale di accuratezza: {len(correct) / len(self.audio_paths) * 100:.2f}%\n")
+
 
         if correct:
             print("== Predizioni Corrette ==")

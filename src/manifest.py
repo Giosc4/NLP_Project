@@ -25,7 +25,7 @@ def create_manifest(data_dir, manifest_path):
                     }
                     manifest_file.write(json.dumps(entry) + '\n')
 
-def split_manifest(manifest_path, train_manifest_path, val_manifest_path, train_split=0.9):
+def split_manifest(manifest_path, train_manifest_path, val_manifest_path, train_split=0.7):
     with open(manifest_path, 'r') as f:
         data = f.readlines()
 

@@ -1,0 +1,1450 @@
+commit hash: f68b2de2d3659686f103f18cb1feb1eb52819684
+diff --git a/asr_model.nemo b/asr_model.nemo
+index 2545d6b..0429875 100644
+Binary files a/asr_model.nemo and b/asr_model.nemo differ
+diff --git a/asr_study.db b/asr_study.db
+index 814e435..451b9cb 100644
+Binary files a/asr_study.db and b/asr_study.db differ
+diff --git a/augmented_audio/arianna1/arianna1_avanti_noise.wav b/augmented_audio/arianna1/arianna1_avanti_noise.wav
+index ed0c8d0..d82122d 100644
+Binary files a/augmented_audio/arianna1/arianna1_avanti_noise.wav and b/augmented_audio/arianna1/arianna1_avanti_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_avanti_timeshift.wav b/augmented_audio/arianna1/arianna1_avanti_timeshift.wav
+index 4894837..e5a15c6 100644
+Binary files a/augmented_audio/arianna1/arianna1_avanti_timeshift.wav and b/augmented_audio/arianna1/arianna1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_cammina_noise.wav b/augmented_audio/arianna1/arianna1_cammina_noise.wav
+index 13ee6df..ee8dd77 100644
+Binary files a/augmented_audio/arianna1/arianna1_cammina_noise.wav and b/augmented_audio/arianna1/arianna1_cammina_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_cammina_timeshift.wav b/augmented_audio/arianna1/arianna1_cammina_timeshift.wav
+index d447b97..97ee86f 100644
+Binary files a/augmented_audio/arianna1/arianna1_cammina_timeshift.wav and b/augmented_audio/arianna1/arianna1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_continua_noise.wav b/augmented_audio/arianna1/arianna1_continua_noise.wav
+index 8be2912..17447a9 100644
+Binary files a/augmented_audio/arianna1/arianna1_continua_noise.wav and b/augmented_audio/arianna1/arianna1_continua_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_continua_timeshift.wav b/augmented_audio/arianna1/arianna1_continua_timeshift.wav
+index e61e46c..afa5c9f 100644
+Binary files a/augmented_audio/arianna1/arianna1_continua_timeshift.wav and b/augmented_audio/arianna1/arianna1_continua_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_corri_noise.wav b/augmented_audio/arianna1/arianna1_corri_noise.wav
+index 1118196..6b00910 100644
+Binary files a/augmented_audio/arianna1/arianna1_corri_noise.wav and b/augmented_audio/arianna1/arianna1_corri_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_corri_timeshift.wav b/augmented_audio/arianna1/arianna1_corri_timeshift.wav
+index e1f65cb..6c036b0 100644
+Binary files a/augmented_audio/arianna1/arianna1_corri_timeshift.wav and b/augmented_audio/arianna1/arianna1_corri_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_destra_noise.wav b/augmented_audio/arianna1/arianna1_destra_noise.wav
+index 782b0a8..07a2606 100644
+Binary files a/augmented_audio/arianna1/arianna1_destra_noise.wav and b/augmented_audio/arianna1/arianna1_destra_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_destra_timeshift.wav b/augmented_audio/arianna1/arianna1_destra_timeshift.wav
+index a4da82d..578b69e 100644
+Binary files a/augmented_audio/arianna1/arianna1_destra_timeshift.wav and b/augmented_audio/arianna1/arianna1_destra_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_esci_noise.wav b/augmented_audio/arianna1/arianna1_esci_noise.wav
+index 4a2308f..6b3dbaa 100644
+Binary files a/augmented_audio/arianna1/arianna1_esci_noise.wav and b/augmented_audio/arianna1/arianna1_esci_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_esci_timeshift.wav b/augmented_audio/arianna1/arianna1_esci_timeshift.wav
+index 4cb245e..90b19c7 100644
+Binary files a/augmented_audio/arianna1/arianna1_esci_timeshift.wav and b/augmented_audio/arianna1/arianna1_esci_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_fermo_noise.wav b/augmented_audio/arianna1/arianna1_fermo_noise.wav
+index 0bb0110..afa271d 100644
+Binary files a/augmented_audio/arianna1/arianna1_fermo_noise.wav and b/augmented_audio/arianna1/arianna1_fermo_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_fermo_timeshift.wav b/augmented_audio/arianna1/arianna1_fermo_timeshift.wav
+index 76e8803..3ffdbbb 100644
+Binary files a/augmented_audio/arianna1/arianna1_fermo_timeshift.wav and b/augmented_audio/arianna1/arianna1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_giu_noise.wav b/augmented_audio/arianna1/arianna1_giu_noise.wav
+index ef6c1e1..09be9bb 100644
+Binary files a/augmented_audio/arianna1/arianna1_giu_noise.wav and b/augmented_audio/arianna1/arianna1_giu_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_giu_timeshift.wav b/augmented_audio/arianna1/arianna1_giu_timeshift.wav
+index 5003a4d..4648dd5 100644
+Binary files a/augmented_audio/arianna1/arianna1_giu_timeshift.wav and b/augmented_audio/arianna1/arianna1_giu_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_indietro_noise.wav b/augmented_audio/arianna1/arianna1_indietro_noise.wav
+index df830db..64b2990 100644
+Binary files a/augmented_audio/arianna1/arianna1_indietro_noise.wav and b/augmented_audio/arianna1/arianna1_indietro_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_indietro_timeshift.wav b/augmented_audio/arianna1/arianna1_indietro_timeshift.wav
+index 90da427..3135386 100644
+Binary files a/augmented_audio/arianna1/arianna1_indietro_timeshift.wav and b/augmented_audio/arianna1/arianna1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_pausa_noise.wav b/augmented_audio/arianna1/arianna1_pausa_noise.wav
+index 5ebc969..d126d03 100644
+Binary files a/augmented_audio/arianna1/arianna1_pausa_noise.wav and b/augmented_audio/arianna1/arianna1_pausa_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_pausa_timeshift.wav b/augmented_audio/arianna1/arianna1_pausa_timeshift.wav
+index a885ed7..509aee3 100644
+Binary files a/augmented_audio/arianna1/arianna1_pausa_timeshift.wav and b/augmented_audio/arianna1/arianna1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_salta_noise.wav b/augmented_audio/arianna1/arianna1_salta_noise.wav
+index 4f0452f..cb5d906 100644
+Binary files a/augmented_audio/arianna1/arianna1_salta_noise.wav and b/augmented_audio/arianna1/arianna1_salta_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_salta_timeshift.wav b/augmented_audio/arianna1/arianna1_salta_timeshift.wav
+index 6141f3c..a91a1dd 100644
+Binary files a/augmented_audio/arianna1/arianna1_salta_timeshift.wav and b/augmented_audio/arianna1/arianna1_salta_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_sinistra_noise.wav b/augmented_audio/arianna1/arianna1_sinistra_noise.wav
+index f5e2bed..e9321e8 100644
+Binary files a/augmented_audio/arianna1/arianna1_sinistra_noise.wav and b/augmented_audio/arianna1/arianna1_sinistra_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_sinistra_timeshift.wav b/augmented_audio/arianna1/arianna1_sinistra_timeshift.wav
+index 768bde8..1509e8a 100644
+Binary files a/augmented_audio/arianna1/arianna1_sinistra_timeshift.wav and b/augmented_audio/arianna1/arianna1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_su_noise.wav b/augmented_audio/arianna1/arianna1_su_noise.wav
+index 9b50058..c5db7b5 100644
+Binary files a/augmented_audio/arianna1/arianna1_su_noise.wav and b/augmented_audio/arianna1/arianna1_su_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_su_timeshift.wav b/augmented_audio/arianna1/arianna1_su_timeshift.wav
+index b3a2fc5..521d48a 100644
+Binary files a/augmented_audio/arianna1/arianna1_su_timeshift.wav and b/augmented_audio/arianna1/arianna1_su_timeshift.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_vola_noise.wav b/augmented_audio/arianna1/arianna1_vola_noise.wav
+index 8dc931d..2d223d8 100644
+Binary files a/augmented_audio/arianna1/arianna1_vola_noise.wav and b/augmented_audio/arianna1/arianna1_vola_noise.wav differ
+diff --git a/augmented_audio/arianna1/arianna1_vola_timeshift.wav b/augmented_audio/arianna1/arianna1_vola_timeshift.wav
+index 8012ca8..097613e 100644
+Binary files a/augmented_audio/arianna1/arianna1_vola_timeshift.wav and b/augmented_audio/arianna1/arianna1_vola_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_avanti_noise.wav b/augmented_audio/arianna2/arianna2_avanti_noise.wav
+index 54caea9..7dd6946 100644
+Binary files a/augmented_audio/arianna2/arianna2_avanti_noise.wav and b/augmented_audio/arianna2/arianna2_avanti_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_avanti_timeshift.wav b/augmented_audio/arianna2/arianna2_avanti_timeshift.wav
+index ff7d0a3..0d4cc4b 100644
+Binary files a/augmented_audio/arianna2/arianna2_avanti_timeshift.wav and b/augmented_audio/arianna2/arianna2_avanti_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_cammina_noise.wav b/augmented_audio/arianna2/arianna2_cammina_noise.wav
+index 1b35f34..de07f1d 100644
+Binary files a/augmented_audio/arianna2/arianna2_cammina_noise.wav and b/augmented_audio/arianna2/arianna2_cammina_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_cammina_timeshift.wav b/augmented_audio/arianna2/arianna2_cammina_timeshift.wav
+index c27cac9..cb7cdc3 100644
+Binary files a/augmented_audio/arianna2/arianna2_cammina_timeshift.wav and b/augmented_audio/arianna2/arianna2_cammina_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_continua_noise.wav b/augmented_audio/arianna2/arianna2_continua_noise.wav
+index 5e4da00..9329842 100644
+Binary files a/augmented_audio/arianna2/arianna2_continua_noise.wav and b/augmented_audio/arianna2/arianna2_continua_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_continua_timeshift.wav b/augmented_audio/arianna2/arianna2_continua_timeshift.wav
+index 7ca90ec..0e90bad 100644
+Binary files a/augmented_audio/arianna2/arianna2_continua_timeshift.wav and b/augmented_audio/arianna2/arianna2_continua_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_corri_noise.wav b/augmented_audio/arianna2/arianna2_corri_noise.wav
+index 4948137..5e68297 100644
+Binary files a/augmented_audio/arianna2/arianna2_corri_noise.wav and b/augmented_audio/arianna2/arianna2_corri_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_corri_timeshift.wav b/augmented_audio/arianna2/arianna2_corri_timeshift.wav
+index 9753a2d..6176a4c 100644
+Binary files a/augmented_audio/arianna2/arianna2_corri_timeshift.wav and b/augmented_audio/arianna2/arianna2_corri_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_destra_noise.wav b/augmented_audio/arianna2/arianna2_destra_noise.wav
+index d59f98c..5d1c04e 100644
+Binary files a/augmented_audio/arianna2/arianna2_destra_noise.wav and b/augmented_audio/arianna2/arianna2_destra_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_destra_timeshift.wav b/augmented_audio/arianna2/arianna2_destra_timeshift.wav
+index fbb7cb5..f19c103 100644
+Binary files a/augmented_audio/arianna2/arianna2_destra_timeshift.wav and b/augmented_audio/arianna2/arianna2_destra_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_esci_noise.wav b/augmented_audio/arianna2/arianna2_esci_noise.wav
+index 236474f..42bce95 100644
+Binary files a/augmented_audio/arianna2/arianna2_esci_noise.wav and b/augmented_audio/arianna2/arianna2_esci_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_esci_timeshift.wav b/augmented_audio/arianna2/arianna2_esci_timeshift.wav
+index 8e70c18..e6cfcdb 100644
+Binary files a/augmented_audio/arianna2/arianna2_esci_timeshift.wav and b/augmented_audio/arianna2/arianna2_esci_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_fermo_noise.wav b/augmented_audio/arianna2/arianna2_fermo_noise.wav
+index 87c6f2a..f5d020d 100644
+Binary files a/augmented_audio/arianna2/arianna2_fermo_noise.wav and b/augmented_audio/arianna2/arianna2_fermo_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_fermo_timeshift.wav b/augmented_audio/arianna2/arianna2_fermo_timeshift.wav
+index 7d0b547..2a1454a 100644
+Binary files a/augmented_audio/arianna2/arianna2_fermo_timeshift.wav and b/augmented_audio/arianna2/arianna2_fermo_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_giu_noise.wav b/augmented_audio/arianna2/arianna2_giu_noise.wav
+index dce9f8a..1115618 100644
+Binary files a/augmented_audio/arianna2/arianna2_giu_noise.wav and b/augmented_audio/arianna2/arianna2_giu_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_giu_timeshift.wav b/augmented_audio/arianna2/arianna2_giu_timeshift.wav
+index e54da00..d429c3b 100644
+Binary files a/augmented_audio/arianna2/arianna2_giu_timeshift.wav and b/augmented_audio/arianna2/arianna2_giu_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_indietro_noise.wav b/augmented_audio/arianna2/arianna2_indietro_noise.wav
+index 49bd4b3..7840c46 100644
+Binary files a/augmented_audio/arianna2/arianna2_indietro_noise.wav and b/augmented_audio/arianna2/arianna2_indietro_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_indietro_timeshift.wav b/augmented_audio/arianna2/arianna2_indietro_timeshift.wav
+index 74d3131..9c0d228 100644
+Binary files a/augmented_audio/arianna2/arianna2_indietro_timeshift.wav and b/augmented_audio/arianna2/arianna2_indietro_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_pausa_noise.wav b/augmented_audio/arianna2/arianna2_pausa_noise.wav
+index 4595e8e..5c7e950 100644
+Binary files a/augmented_audio/arianna2/arianna2_pausa_noise.wav and b/augmented_audio/arianna2/arianna2_pausa_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_pausa_timeshift.wav b/augmented_audio/arianna2/arianna2_pausa_timeshift.wav
+index c30d099..b598d9a 100644
+Binary files a/augmented_audio/arianna2/arianna2_pausa_timeshift.wav and b/augmented_audio/arianna2/arianna2_pausa_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_salta_noise.wav b/augmented_audio/arianna2/arianna2_salta_noise.wav
+index 2498714..205bde0 100644
+Binary files a/augmented_audio/arianna2/arianna2_salta_noise.wav and b/augmented_audio/arianna2/arianna2_salta_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_salta_timeshift.wav b/augmented_audio/arianna2/arianna2_salta_timeshift.wav
+index ae9ac43..7878201 100644
+Binary files a/augmented_audio/arianna2/arianna2_salta_timeshift.wav and b/augmented_audio/arianna2/arianna2_salta_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_sinistra_noise.wav b/augmented_audio/arianna2/arianna2_sinistra_noise.wav
+index f27e463..1aa0fb3 100644
+Binary files a/augmented_audio/arianna2/arianna2_sinistra_noise.wav and b/augmented_audio/arianna2/arianna2_sinistra_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_sinistra_timeshift.wav b/augmented_audio/arianna2/arianna2_sinistra_timeshift.wav
+index 43f7cde..9cf5d22 100644
+Binary files a/augmented_audio/arianna2/arianna2_sinistra_timeshift.wav and b/augmented_audio/arianna2/arianna2_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_su_noise.wav b/augmented_audio/arianna2/arianna2_su_noise.wav
+index 894e690..b38f180 100644
+Binary files a/augmented_audio/arianna2/arianna2_su_noise.wav and b/augmented_audio/arianna2/arianna2_su_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_su_timeshift.wav b/augmented_audio/arianna2/arianna2_su_timeshift.wav
+index b650463..03a8ce5 100644
+Binary files a/augmented_audio/arianna2/arianna2_su_timeshift.wav and b/augmented_audio/arianna2/arianna2_su_timeshift.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_vola_noise.wav b/augmented_audio/arianna2/arianna2_vola_noise.wav
+index c9c5a1d..0f2a93c 100644
+Binary files a/augmented_audio/arianna2/arianna2_vola_noise.wav and b/augmented_audio/arianna2/arianna2_vola_noise.wav differ
+diff --git a/augmented_audio/arianna2/arianna2_vola_timeshift.wav b/augmented_audio/arianna2/arianna2_vola_timeshift.wav
+index 6cf8979..429a830 100644
+Binary files a/augmented_audio/arianna2/arianna2_vola_timeshift.wav and b/augmented_audio/arianna2/arianna2_vola_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_avanti_noise.wav b/augmented_audio/cristina1/cristina1_avanti_noise.wav
+index 8a6dd0c..1576c68 100644
+Binary files a/augmented_audio/cristina1/cristina1_avanti_noise.wav and b/augmented_audio/cristina1/cristina1_avanti_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_avanti_timeshift.wav b/augmented_audio/cristina1/cristina1_avanti_timeshift.wav
+index 44478b0..87c6ca9 100644
+Binary files a/augmented_audio/cristina1/cristina1_avanti_timeshift.wav and b/augmented_audio/cristina1/cristina1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_cammina_noise.wav b/augmented_audio/cristina1/cristina1_cammina_noise.wav
+index 62a0179..b5fe07a 100644
+Binary files a/augmented_audio/cristina1/cristina1_cammina_noise.wav and b/augmented_audio/cristina1/cristina1_cammina_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_cammina_timeshift.wav b/augmented_audio/cristina1/cristina1_cammina_timeshift.wav
+index c4fd063..2f6477b 100644
+Binary files a/augmented_audio/cristina1/cristina1_cammina_timeshift.wav and b/augmented_audio/cristina1/cristina1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_continua_noise.wav b/augmented_audio/cristina1/cristina1_continua_noise.wav
+index 193305c..006bfa3 100644
+Binary files a/augmented_audio/cristina1/cristina1_continua_noise.wav and b/augmented_audio/cristina1/cristina1_continua_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_continua_timeshift.wav b/augmented_audio/cristina1/cristina1_continua_timeshift.wav
+index 340136a..67d841f 100644
+Binary files a/augmented_audio/cristina1/cristina1_continua_timeshift.wav and b/augmented_audio/cristina1/cristina1_continua_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_corri_noise.wav b/augmented_audio/cristina1/cristina1_corri_noise.wav
+index 0529808..0f5c661 100644
+Binary files a/augmented_audio/cristina1/cristina1_corri_noise.wav and b/augmented_audio/cristina1/cristina1_corri_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_corri_timeshift.wav b/augmented_audio/cristina1/cristina1_corri_timeshift.wav
+index 5a7e3a0..678d3cd 100644
+Binary files a/augmented_audio/cristina1/cristina1_corri_timeshift.wav and b/augmented_audio/cristina1/cristina1_corri_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_destra_noise.wav b/augmented_audio/cristina1/cristina1_destra_noise.wav
+index aca9de7..92d3128 100644
+Binary files a/augmented_audio/cristina1/cristina1_destra_noise.wav and b/augmented_audio/cristina1/cristina1_destra_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_destra_timeshift.wav b/augmented_audio/cristina1/cristina1_destra_timeshift.wav
+index 2dc84ea..de0d6c1 100644
+Binary files a/augmented_audio/cristina1/cristina1_destra_timeshift.wav and b/augmented_audio/cristina1/cristina1_destra_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_esci_noise.wav b/augmented_audio/cristina1/cristina1_esci_noise.wav
+index dee1efd..8e19aab 100644
+Binary files a/augmented_audio/cristina1/cristina1_esci_noise.wav and b/augmented_audio/cristina1/cristina1_esci_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_esci_timeshift.wav b/augmented_audio/cristina1/cristina1_esci_timeshift.wav
+index 0191091..1e823d6 100644
+Binary files a/augmented_audio/cristina1/cristina1_esci_timeshift.wav and b/augmented_audio/cristina1/cristina1_esci_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_fermo_noise.wav b/augmented_audio/cristina1/cristina1_fermo_noise.wav
+index 59bd11b..a53a588 100644
+Binary files a/augmented_audio/cristina1/cristina1_fermo_noise.wav and b/augmented_audio/cristina1/cristina1_fermo_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_fermo_timeshift.wav b/augmented_audio/cristina1/cristina1_fermo_timeshift.wav
+index d3b688c..96b47d8 100644
+Binary files a/augmented_audio/cristina1/cristina1_fermo_timeshift.wav and b/augmented_audio/cristina1/cristina1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_giu_noise.wav b/augmented_audio/cristina1/cristina1_giu_noise.wav
+index e1a552d..4df6b38 100644
+Binary files a/augmented_audio/cristina1/cristina1_giu_noise.wav and b/augmented_audio/cristina1/cristina1_giu_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_giu_timeshift.wav b/augmented_audio/cristina1/cristina1_giu_timeshift.wav
+index 6e9ec5d..48198dd 100644
+Binary files a/augmented_audio/cristina1/cristina1_giu_timeshift.wav and b/augmented_audio/cristina1/cristina1_giu_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_indietro_noise.wav b/augmented_audio/cristina1/cristina1_indietro_noise.wav
+index e54f96a..d60249d 100644
+Binary files a/augmented_audio/cristina1/cristina1_indietro_noise.wav and b/augmented_audio/cristina1/cristina1_indietro_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_indietro_timeshift.wav b/augmented_audio/cristina1/cristina1_indietro_timeshift.wav
+index a536409..8c73fd2 100644
+Binary files a/augmented_audio/cristina1/cristina1_indietro_timeshift.wav and b/augmented_audio/cristina1/cristina1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_pausa_noise.wav b/augmented_audio/cristina1/cristina1_pausa_noise.wav
+index 50fff6f..6ada925 100644
+Binary files a/augmented_audio/cristina1/cristina1_pausa_noise.wav and b/augmented_audio/cristina1/cristina1_pausa_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_pausa_timeshift.wav b/augmented_audio/cristina1/cristina1_pausa_timeshift.wav
+index 603ecce..30046d1 100644
+Binary files a/augmented_audio/cristina1/cristina1_pausa_timeshift.wav and b/augmented_audio/cristina1/cristina1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_salta_noise.wav b/augmented_audio/cristina1/cristina1_salta_noise.wav
+index 7b5127f..a8ca17c 100644
+Binary files a/augmented_audio/cristina1/cristina1_salta_noise.wav and b/augmented_audio/cristina1/cristina1_salta_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_salta_timeshift.wav b/augmented_audio/cristina1/cristina1_salta_timeshift.wav
+index 2841638..f6046ce 100644
+Binary files a/augmented_audio/cristina1/cristina1_salta_timeshift.wav and b/augmented_audio/cristina1/cristina1_salta_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_sinistra_noise.wav b/augmented_audio/cristina1/cristina1_sinistra_noise.wav
+index 8a4ec1d..f80208e 100644
+Binary files a/augmented_audio/cristina1/cristina1_sinistra_noise.wav and b/augmented_audio/cristina1/cristina1_sinistra_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_sinistra_timeshift.wav b/augmented_audio/cristina1/cristina1_sinistra_timeshift.wav
+index 4a34b35..6b130ed 100644
+Binary files a/augmented_audio/cristina1/cristina1_sinistra_timeshift.wav and b/augmented_audio/cristina1/cristina1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_su_noise.wav b/augmented_audio/cristina1/cristina1_su_noise.wav
+index e98bcfe..52f30a3 100644
+Binary files a/augmented_audio/cristina1/cristina1_su_noise.wav and b/augmented_audio/cristina1/cristina1_su_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_su_timeshift.wav b/augmented_audio/cristina1/cristina1_su_timeshift.wav
+index f5865cc..fb290d9 100644
+Binary files a/augmented_audio/cristina1/cristina1_su_timeshift.wav and b/augmented_audio/cristina1/cristina1_su_timeshift.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_vola_noise.wav b/augmented_audio/cristina1/cristina1_vola_noise.wav
+index 43c955f..f3d7861 100644
+Binary files a/augmented_audio/cristina1/cristina1_vola_noise.wav and b/augmented_audio/cristina1/cristina1_vola_noise.wav differ
+diff --git a/augmented_audio/cristina1/cristina1_vola_timeshift.wav b/augmented_audio/cristina1/cristina1_vola_timeshift.wav
+index e8850b4..a98c340 100644
+Binary files a/augmented_audio/cristina1/cristina1_vola_timeshift.wav and b/augmented_audio/cristina1/cristina1_vola_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_avanti_noise.wav b/augmented_audio/cristina2/cristina2_avanti_noise.wav
+index ad76e48..e06a4ab 100644
+Binary files a/augmented_audio/cristina2/cristina2_avanti_noise.wav and b/augmented_audio/cristina2/cristina2_avanti_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_avanti_timeshift.wav b/augmented_audio/cristina2/cristina2_avanti_timeshift.wav
+index 5317936..6970025 100644
+Binary files a/augmented_audio/cristina2/cristina2_avanti_timeshift.wav and b/augmented_audio/cristina2/cristina2_avanti_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_cammina_noise.wav b/augmented_audio/cristina2/cristina2_cammina_noise.wav
+index 48966df..8d724c8 100644
+Binary files a/augmented_audio/cristina2/cristina2_cammina_noise.wav and b/augmented_audio/cristina2/cristina2_cammina_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_cammina_timeshift.wav b/augmented_audio/cristina2/cristina2_cammina_timeshift.wav
+index f596260..0973d7d 100644
+Binary files a/augmented_audio/cristina2/cristina2_cammina_timeshift.wav and b/augmented_audio/cristina2/cristina2_cammina_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_continua_noise.wav b/augmented_audio/cristina2/cristina2_continua_noise.wav
+index e4a0369..5f881ee 100644
+Binary files a/augmented_audio/cristina2/cristina2_continua_noise.wav and b/augmented_audio/cristina2/cristina2_continua_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_continua_timeshift.wav b/augmented_audio/cristina2/cristina2_continua_timeshift.wav
+index 3536ddc..fb5551c 100644
+Binary files a/augmented_audio/cristina2/cristina2_continua_timeshift.wav and b/augmented_audio/cristina2/cristina2_continua_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_corri_noise.wav b/augmented_audio/cristina2/cristina2_corri_noise.wav
+index f4e17e4..1b8672e 100644
+Binary files a/augmented_audio/cristina2/cristina2_corri_noise.wav and b/augmented_audio/cristina2/cristina2_corri_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_corri_timeshift.wav b/augmented_audio/cristina2/cristina2_corri_timeshift.wav
+index 60e1de4..174c099 100644
+Binary files a/augmented_audio/cristina2/cristina2_corri_timeshift.wav and b/augmented_audio/cristina2/cristina2_corri_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_destra_noise.wav b/augmented_audio/cristina2/cristina2_destra_noise.wav
+index c033fba..015c936 100644
+Binary files a/augmented_audio/cristina2/cristina2_destra_noise.wav and b/augmented_audio/cristina2/cristina2_destra_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_destra_timeshift.wav b/augmented_audio/cristina2/cristina2_destra_timeshift.wav
+index 7e35b38..6dfdfff 100644
+Binary files a/augmented_audio/cristina2/cristina2_destra_timeshift.wav and b/augmented_audio/cristina2/cristina2_destra_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_esci_noise.wav b/augmented_audio/cristina2/cristina2_esci_noise.wav
+index 263d906..26e6c28 100644
+Binary files a/augmented_audio/cristina2/cristina2_esci_noise.wav and b/augmented_audio/cristina2/cristina2_esci_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_esci_timeshift.wav b/augmented_audio/cristina2/cristina2_esci_timeshift.wav
+index 8ddbbc6..da99a45 100644
+Binary files a/augmented_audio/cristina2/cristina2_esci_timeshift.wav and b/augmented_audio/cristina2/cristina2_esci_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_fermo_noise.wav b/augmented_audio/cristina2/cristina2_fermo_noise.wav
+index 1766f78..64f7b7a 100644
+Binary files a/augmented_audio/cristina2/cristina2_fermo_noise.wav and b/augmented_audio/cristina2/cristina2_fermo_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_fermo_timeshift.wav b/augmented_audio/cristina2/cristina2_fermo_timeshift.wav
+index 2246f22..8f846d2 100644
+Binary files a/augmented_audio/cristina2/cristina2_fermo_timeshift.wav and b/augmented_audio/cristina2/cristina2_fermo_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_giu_noise.wav b/augmented_audio/cristina2/cristina2_giu_noise.wav
+index 02b1442..332faaa 100644
+Binary files a/augmented_audio/cristina2/cristina2_giu_noise.wav and b/augmented_audio/cristina2/cristina2_giu_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_giu_timeshift.wav b/augmented_audio/cristina2/cristina2_giu_timeshift.wav
+index 627d440..b670180 100644
+Binary files a/augmented_audio/cristina2/cristina2_giu_timeshift.wav and b/augmented_audio/cristina2/cristina2_giu_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_indietro_noise.wav b/augmented_audio/cristina2/cristina2_indietro_noise.wav
+index 377d791..fe6b293 100644
+Binary files a/augmented_audio/cristina2/cristina2_indietro_noise.wav and b/augmented_audio/cristina2/cristina2_indietro_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_indietro_timeshift.wav b/augmented_audio/cristina2/cristina2_indietro_timeshift.wav
+index 5766cf3..5d0efb1 100644
+Binary files a/augmented_audio/cristina2/cristina2_indietro_timeshift.wav and b/augmented_audio/cristina2/cristina2_indietro_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_pausa_noise.wav b/augmented_audio/cristina2/cristina2_pausa_noise.wav
+index 676b5ad..07282a2 100644
+Binary files a/augmented_audio/cristina2/cristina2_pausa_noise.wav and b/augmented_audio/cristina2/cristina2_pausa_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_pausa_timeshift.wav b/augmented_audio/cristina2/cristina2_pausa_timeshift.wav
+index 5e47f4c..63e8ff7 100644
+Binary files a/augmented_audio/cristina2/cristina2_pausa_timeshift.wav and b/augmented_audio/cristina2/cristina2_pausa_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_salta_noise.wav b/augmented_audio/cristina2/cristina2_salta_noise.wav
+index e318fb5..17798d1 100644
+Binary files a/augmented_audio/cristina2/cristina2_salta_noise.wav and b/augmented_audio/cristina2/cristina2_salta_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_salta_timeshift.wav b/augmented_audio/cristina2/cristina2_salta_timeshift.wav
+index 6be48bd..364f788 100644
+Binary files a/augmented_audio/cristina2/cristina2_salta_timeshift.wav and b/augmented_audio/cristina2/cristina2_salta_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_sinistra_noise.wav b/augmented_audio/cristina2/cristina2_sinistra_noise.wav
+index 5ffbee8..1cc03f5 100644
+Binary files a/augmented_audio/cristina2/cristina2_sinistra_noise.wav and b/augmented_audio/cristina2/cristina2_sinistra_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_sinistra_timeshift.wav b/augmented_audio/cristina2/cristina2_sinistra_timeshift.wav
+index d8b52ec..07b66ea 100644
+Binary files a/augmented_audio/cristina2/cristina2_sinistra_timeshift.wav and b/augmented_audio/cristina2/cristina2_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_su_noise.wav b/augmented_audio/cristina2/cristina2_su_noise.wav
+index a275211..ddaf3f1 100644
+Binary files a/augmented_audio/cristina2/cristina2_su_noise.wav and b/augmented_audio/cristina2/cristina2_su_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_su_timeshift.wav b/augmented_audio/cristina2/cristina2_su_timeshift.wav
+index 441fed4..da0debd 100644
+Binary files a/augmented_audio/cristina2/cristina2_su_timeshift.wav and b/augmented_audio/cristina2/cristina2_su_timeshift.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_vola_noise.wav b/augmented_audio/cristina2/cristina2_vola_noise.wav
+index 55c139c..6ebd274 100644
+Binary files a/augmented_audio/cristina2/cristina2_vola_noise.wav and b/augmented_audio/cristina2/cristina2_vola_noise.wav differ
+diff --git a/augmented_audio/cristina2/cristina2_vola_timeshift.wav b/augmented_audio/cristina2/cristina2_vola_timeshift.wav
+index 5c394ce..e3da5cc 100644
+Binary files a/augmented_audio/cristina2/cristina2_vola_timeshift.wav and b/augmented_audio/cristina2/cristina2_vola_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_avanti_noise.wav b/augmented_audio/giancarlo1/giancarlo1_avanti_noise.wav
+index 7e055ae..d6a51cc 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_avanti_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_avanti_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_avanti_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_avanti_timeshift.wav
+index 060335c..151ea75 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_avanti_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_cammina_noise.wav b/augmented_audio/giancarlo1/giancarlo1_cammina_noise.wav
+index d35736a..8f98c23 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_cammina_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_cammina_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_cammina_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_cammina_timeshift.wav
+index 52222b3..319d951 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_cammina_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_continua_noise.wav b/augmented_audio/giancarlo1/giancarlo1_continua_noise.wav
+index 56b5ceb..f6a80f7 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_continua_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_continua_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_continua_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_continua_timeshift.wav
+index 1b6cf83..e973376 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_continua_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_continua_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_corri_noise.wav b/augmented_audio/giancarlo1/giancarlo1_corri_noise.wav
+index 1a0f437..3b1e21d 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_corri_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_corri_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_corri_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_corri_timeshift.wav
+index 9d7b024..172ae7d 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_corri_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_corri_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_destra_noise.wav b/augmented_audio/giancarlo1/giancarlo1_destra_noise.wav
+index 36f48e5..d046adf 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_destra_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_destra_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_destra_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_destra_timeshift.wav
+index 7ab5af5..f99bd47 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_destra_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_destra_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_fermo_noise.wav b/augmented_audio/giancarlo1/giancarlo1_fermo_noise.wav
+index 074b998..7db045a 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_fermo_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_fermo_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_fermo_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_fermo_timeshift.wav
+index 1261da8..ef020a6 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_fermo_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_giu_noise.wav b/augmented_audio/giancarlo1/giancarlo1_giu_noise.wav
+index cf9f7d1..d1051dd 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_giu_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_giu_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_giu_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_giu_timeshift.wav
+index 3f07f17..9467646 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_giu_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_giu_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_indietro_noise.wav b/augmented_audio/giancarlo1/giancarlo1_indietro_noise.wav
+index dbb6565..dd9d00d 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_indietro_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_indietro_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_indietro_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_indietro_timeshift.wav
+index 384cde9..d8b8ee3 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_indietro_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_pausa_noise.wav b/augmented_audio/giancarlo1/giancarlo1_pausa_noise.wav
+index 5348aee..280b219 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_pausa_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_pausa_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_pausa_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_pausa_timeshift.wav
+index cb4db20..999e33e 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_pausa_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_salta_noise.wav b/augmented_audio/giancarlo1/giancarlo1_salta_noise.wav
+index fcd68ea..ae49ddb 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_salta_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_salta_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_salta_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_salta_timeshift.wav
+index 1e8b290..89ebf44 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_salta_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_salta_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_sinistra_noise.wav b/augmented_audio/giancarlo1/giancarlo1_sinistra_noise.wav
+index d27e510..88efbbb 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_sinistra_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_sinistra_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_sinistra_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_sinistra_timeshift.wav
+index fc0bb46..2e94138 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_sinistra_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_su_noise.wav b/augmented_audio/giancarlo1/giancarlo1_su_noise.wav
+index 62dd707..7e6679b 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_su_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_su_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_su_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_su_timeshift.wav
+index 343cd6d..d2b33d3 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_su_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_su_timeshift.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_vola_noise.wav b/augmented_audio/giancarlo1/giancarlo1_vola_noise.wav
+index d154fb0..a276f5c 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_vola_noise.wav and b/augmented_audio/giancarlo1/giancarlo1_vola_noise.wav differ
+diff --git a/augmented_audio/giancarlo1/giancarlo1_vola_timeshift.wav b/augmented_audio/giancarlo1/giancarlo1_vola_timeshift.wav
+index 6c64fde..11fd56b 100644
+Binary files a/augmented_audio/giancarlo1/giancarlo1_vola_timeshift.wav and b/augmented_audio/giancarlo1/giancarlo1_vola_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_avanti_noise.wav b/augmented_audio/gio1/gio1_avanti_noise.wav
+index faf5044..6977b95 100644
+Binary files a/augmented_audio/gio1/gio1_avanti_noise.wav and b/augmented_audio/gio1/gio1_avanti_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_avanti_timeshift.wav b/augmented_audio/gio1/gio1_avanti_timeshift.wav
+index a1c94d2..a7205d3 100644
+Binary files a/augmented_audio/gio1/gio1_avanti_timeshift.wav and b/augmented_audio/gio1/gio1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_cammina_noise.wav b/augmented_audio/gio1/gio1_cammina_noise.wav
+index e18a382..1bf33a2 100644
+Binary files a/augmented_audio/gio1/gio1_cammina_noise.wav and b/augmented_audio/gio1/gio1_cammina_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_cammina_timeshift.wav b/augmented_audio/gio1/gio1_cammina_timeshift.wav
+index 6a36f31..2b92df2 100644
+Binary files a/augmented_audio/gio1/gio1_cammina_timeshift.wav and b/augmented_audio/gio1/gio1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_continua_noise.wav b/augmented_audio/gio1/gio1_continua_noise.wav
+index dd8010a..5dfb4b4 100644
+Binary files a/augmented_audio/gio1/gio1_continua_noise.wav and b/augmented_audio/gio1/gio1_continua_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_continua_timeshift.wav b/augmented_audio/gio1/gio1_continua_timeshift.wav
+index 22fee4f..50c9aee 100644
+Binary files a/augmented_audio/gio1/gio1_continua_timeshift.wav and b/augmented_audio/gio1/gio1_continua_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_corri_noise.wav b/augmented_audio/gio1/gio1_corri_noise.wav
+index 4a9fd02..e745a4e 100644
+Binary files a/augmented_audio/gio1/gio1_corri_noise.wav and b/augmented_audio/gio1/gio1_corri_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_corri_timeshift.wav b/augmented_audio/gio1/gio1_corri_timeshift.wav
+index adacd0e..5c32e7d 100644
+Binary files a/augmented_audio/gio1/gio1_corri_timeshift.wav and b/augmented_audio/gio1/gio1_corri_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_destra_noise.wav b/augmented_audio/gio1/gio1_destra_noise.wav
+index d03154e..863e51f 100644
+Binary files a/augmented_audio/gio1/gio1_destra_noise.wav and b/augmented_audio/gio1/gio1_destra_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_destra_timeshift.wav b/augmented_audio/gio1/gio1_destra_timeshift.wav
+index 7f5b52c..4441401 100644
+Binary files a/augmented_audio/gio1/gio1_destra_timeshift.wav and b/augmented_audio/gio1/gio1_destra_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_esci_noise.wav b/augmented_audio/gio1/gio1_esci_noise.wav
+index 46ae187..a1a6575 100644
+Binary files a/augmented_audio/gio1/gio1_esci_noise.wav and b/augmented_audio/gio1/gio1_esci_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_esci_timeshift.wav b/augmented_audio/gio1/gio1_esci_timeshift.wav
+index 0c27ce3..744d0d1 100644
+Binary files a/augmented_audio/gio1/gio1_esci_timeshift.wav and b/augmented_audio/gio1/gio1_esci_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_fermo_noise.wav b/augmented_audio/gio1/gio1_fermo_noise.wav
+index 1ab4617..7773d4f 100644
+Binary files a/augmented_audio/gio1/gio1_fermo_noise.wav and b/augmented_audio/gio1/gio1_fermo_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_fermo_timeshift.wav b/augmented_audio/gio1/gio1_fermo_timeshift.wav
+index c2f9bc2..49132a6 100644
+Binary files a/augmented_audio/gio1/gio1_fermo_timeshift.wav and b/augmented_audio/gio1/gio1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_giu_noise.wav b/augmented_audio/gio1/gio1_giu_noise.wav
+index c716b1b..101dc04 100644
+Binary files a/augmented_audio/gio1/gio1_giu_noise.wav and b/augmented_audio/gio1/gio1_giu_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_giu_timeshift.wav b/augmented_audio/gio1/gio1_giu_timeshift.wav
+index 28fc743..04c5a2c 100644
+Binary files a/augmented_audio/gio1/gio1_giu_timeshift.wav and b/augmented_audio/gio1/gio1_giu_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_indietro_noise.wav b/augmented_audio/gio1/gio1_indietro_noise.wav
+index c89f558..a414136 100644
+Binary files a/augmented_audio/gio1/gio1_indietro_noise.wav and b/augmented_audio/gio1/gio1_indietro_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_indietro_timeshift.wav b/augmented_audio/gio1/gio1_indietro_timeshift.wav
+index 8fc940b..c49ac39 100644
+Binary files a/augmented_audio/gio1/gio1_indietro_timeshift.wav and b/augmented_audio/gio1/gio1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_pausa_noise.wav b/augmented_audio/gio1/gio1_pausa_noise.wav
+index 5ca7288..62d5380 100644
+Binary files a/augmented_audio/gio1/gio1_pausa_noise.wav and b/augmented_audio/gio1/gio1_pausa_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_pausa_timeshift.wav b/augmented_audio/gio1/gio1_pausa_timeshift.wav
+index 2204306..96f7c21 100644
+Binary files a/augmented_audio/gio1/gio1_pausa_timeshift.wav and b/augmented_audio/gio1/gio1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_salta_noise.wav b/augmented_audio/gio1/gio1_salta_noise.wav
+index d5230d1..5d1249a 100644
+Binary files a/augmented_audio/gio1/gio1_salta_noise.wav and b/augmented_audio/gio1/gio1_salta_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_salta_timeshift.wav b/augmented_audio/gio1/gio1_salta_timeshift.wav
+index 47d1110..e4f78fc 100644
+Binary files a/augmented_audio/gio1/gio1_salta_timeshift.wav and b/augmented_audio/gio1/gio1_salta_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_sinistra_noise.wav b/augmented_audio/gio1/gio1_sinistra_noise.wav
+index 9be2f97..e96278d 100644
+Binary files a/augmented_audio/gio1/gio1_sinistra_noise.wav and b/augmented_audio/gio1/gio1_sinistra_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_sinistra_timeshift.wav b/augmented_audio/gio1/gio1_sinistra_timeshift.wav
+index 5fd1d83..33140d2 100644
+Binary files a/augmented_audio/gio1/gio1_sinistra_timeshift.wav and b/augmented_audio/gio1/gio1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_su_noise.wav b/augmented_audio/gio1/gio1_su_noise.wav
+index 59c26b5..26d096a 100644
+Binary files a/augmented_audio/gio1/gio1_su_noise.wav and b/augmented_audio/gio1/gio1_su_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_su_timeshift.wav b/augmented_audio/gio1/gio1_su_timeshift.wav
+index a9dbaf5..f70f0b8 100644
+Binary files a/augmented_audio/gio1/gio1_su_timeshift.wav and b/augmented_audio/gio1/gio1_su_timeshift.wav differ
+diff --git a/augmented_audio/gio1/gio1_vola_noise.wav b/augmented_audio/gio1/gio1_vola_noise.wav
+index d7362b2..16b7357 100644
+Binary files a/augmented_audio/gio1/gio1_vola_noise.wav and b/augmented_audio/gio1/gio1_vola_noise.wav differ
+diff --git a/augmented_audio/gio1/gio1_vola_timeshift.wav b/augmented_audio/gio1/gio1_vola_timeshift.wav
+index b559285..f0694b7 100644
+Binary files a/augmented_audio/gio1/gio1_vola_timeshift.wav and b/augmented_audio/gio1/gio1_vola_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_avanti_noise.wav b/augmented_audio/gio2/gio2_avanti_noise.wav
+index fa23798..c7c7fd8 100644
+Binary files a/augmented_audio/gio2/gio2_avanti_noise.wav and b/augmented_audio/gio2/gio2_avanti_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_avanti_timeshift.wav b/augmented_audio/gio2/gio2_avanti_timeshift.wav
+index 20eeb79..1655984 100644
+Binary files a/augmented_audio/gio2/gio2_avanti_timeshift.wav and b/augmented_audio/gio2/gio2_avanti_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_cammina_noise.wav b/augmented_audio/gio2/gio2_cammina_noise.wav
+index cb22c0c..d72111b 100644
+Binary files a/augmented_audio/gio2/gio2_cammina_noise.wav and b/augmented_audio/gio2/gio2_cammina_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_cammina_timeshift.wav b/augmented_audio/gio2/gio2_cammina_timeshift.wav
+index a7d8889..7af832d 100644
+Binary files a/augmented_audio/gio2/gio2_cammina_timeshift.wav and b/augmented_audio/gio2/gio2_cammina_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_continua_noise.wav b/augmented_audio/gio2/gio2_continua_noise.wav
+index 4c90156..244279c 100644
+Binary files a/augmented_audio/gio2/gio2_continua_noise.wav and b/augmented_audio/gio2/gio2_continua_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_continua_timeshift.wav b/augmented_audio/gio2/gio2_continua_timeshift.wav
+index f1fd658..2f2e70f 100644
+Binary files a/augmented_audio/gio2/gio2_continua_timeshift.wav and b/augmented_audio/gio2/gio2_continua_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_corri_noise.wav b/augmented_audio/gio2/gio2_corri_noise.wav
+index cbd13e8..90020e4 100644
+Binary files a/augmented_audio/gio2/gio2_corri_noise.wav and b/augmented_audio/gio2/gio2_corri_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_corri_timeshift.wav b/augmented_audio/gio2/gio2_corri_timeshift.wav
+index 5697659..c99d636 100644
+Binary files a/augmented_audio/gio2/gio2_corri_timeshift.wav and b/augmented_audio/gio2/gio2_corri_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_destra_noise.wav b/augmented_audio/gio2/gio2_destra_noise.wav
+index eb830ad..0cec565 100644
+Binary files a/augmented_audio/gio2/gio2_destra_noise.wav and b/augmented_audio/gio2/gio2_destra_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_destra_timeshift.wav b/augmented_audio/gio2/gio2_destra_timeshift.wav
+index 57ca629..4292c95 100644
+Binary files a/augmented_audio/gio2/gio2_destra_timeshift.wav and b/augmented_audio/gio2/gio2_destra_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_esci_noise.wav b/augmented_audio/gio2/gio2_esci_noise.wav
+index 2f87a42..e0ab680 100644
+Binary files a/augmented_audio/gio2/gio2_esci_noise.wav and b/augmented_audio/gio2/gio2_esci_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_esci_timeshift.wav b/augmented_audio/gio2/gio2_esci_timeshift.wav
+index f1aa281..99178f4 100644
+Binary files a/augmented_audio/gio2/gio2_esci_timeshift.wav and b/augmented_audio/gio2/gio2_esci_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_fermo_noise.wav b/augmented_audio/gio2/gio2_fermo_noise.wav
+index d0191a7..065ec04 100644
+Binary files a/augmented_audio/gio2/gio2_fermo_noise.wav and b/augmented_audio/gio2/gio2_fermo_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_fermo_timeshift.wav b/augmented_audio/gio2/gio2_fermo_timeshift.wav
+index 9f8a119..cf0b90b 100644
+Binary files a/augmented_audio/gio2/gio2_fermo_timeshift.wav and b/augmented_audio/gio2/gio2_fermo_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_giu_noise.wav b/augmented_audio/gio2/gio2_giu_noise.wav
+index c6903db..99d490c 100644
+Binary files a/augmented_audio/gio2/gio2_giu_noise.wav and b/augmented_audio/gio2/gio2_giu_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_giu_timeshift.wav b/augmented_audio/gio2/gio2_giu_timeshift.wav
+index 1224189..02207d9 100644
+Binary files a/augmented_audio/gio2/gio2_giu_timeshift.wav and b/augmented_audio/gio2/gio2_giu_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_indietro_noise.wav b/augmented_audio/gio2/gio2_indietro_noise.wav
+index 6b10377..48ce7c9 100644
+Binary files a/augmented_audio/gio2/gio2_indietro_noise.wav and b/augmented_audio/gio2/gio2_indietro_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_indietro_timeshift.wav b/augmented_audio/gio2/gio2_indietro_timeshift.wav
+index 0ba1010..8bbb2c3 100644
+Binary files a/augmented_audio/gio2/gio2_indietro_timeshift.wav and b/augmented_audio/gio2/gio2_indietro_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_pausa_noise.wav b/augmented_audio/gio2/gio2_pausa_noise.wav
+index 03cc89d..3126695 100644
+Binary files a/augmented_audio/gio2/gio2_pausa_noise.wav and b/augmented_audio/gio2/gio2_pausa_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_pausa_timeshift.wav b/augmented_audio/gio2/gio2_pausa_timeshift.wav
+index e70a1ba..1091dc8 100644
+Binary files a/augmented_audio/gio2/gio2_pausa_timeshift.wav and b/augmented_audio/gio2/gio2_pausa_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_salta_noise.wav b/augmented_audio/gio2/gio2_salta_noise.wav
+index b6c0fee..fe57d4e 100644
+Binary files a/augmented_audio/gio2/gio2_salta_noise.wav and b/augmented_audio/gio2/gio2_salta_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_salta_timeshift.wav b/augmented_audio/gio2/gio2_salta_timeshift.wav
+index d2c7998..7b2b3ab 100644
+Binary files a/augmented_audio/gio2/gio2_salta_timeshift.wav and b/augmented_audio/gio2/gio2_salta_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_sinistra_noise.wav b/augmented_audio/gio2/gio2_sinistra_noise.wav
+index fa61b1f..aeb5824 100644
+Binary files a/augmented_audio/gio2/gio2_sinistra_noise.wav and b/augmented_audio/gio2/gio2_sinistra_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_sinistra_timeshift.wav b/augmented_audio/gio2/gio2_sinistra_timeshift.wav
+index 8c4cca6..69ab748 100644
+Binary files a/augmented_audio/gio2/gio2_sinistra_timeshift.wav and b/augmented_audio/gio2/gio2_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_su_noise.wav b/augmented_audio/gio2/gio2_su_noise.wav
+index 9117017..7161719 100644
+Binary files a/augmented_audio/gio2/gio2_su_noise.wav and b/augmented_audio/gio2/gio2_su_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_su_timeshift.wav b/augmented_audio/gio2/gio2_su_timeshift.wav
+index 10b00f4..7a55a9d 100644
+Binary files a/augmented_audio/gio2/gio2_su_timeshift.wav and b/augmented_audio/gio2/gio2_su_timeshift.wav differ
+diff --git a/augmented_audio/gio2/gio2_vola_noise.wav b/augmented_audio/gio2/gio2_vola_noise.wav
+index 2aed6e9..49081c4 100644
+Binary files a/augmented_audio/gio2/gio2_vola_noise.wav and b/augmented_audio/gio2/gio2_vola_noise.wav differ
+diff --git a/augmented_audio/gio2/gio2_vola_timeshift.wav b/augmented_audio/gio2/gio2_vola_timeshift.wav
+index 5963940..3d75c35 100644
+Binary files a/augmented_audio/gio2/gio2_vola_timeshift.wav and b/augmented_audio/gio2/gio2_vola_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_avanti_noise.wav b/augmented_audio/greta1/greta1_avanti_noise.wav
+index 777ee4d..66151ed 100644
+Binary files a/augmented_audio/greta1/greta1_avanti_noise.wav and b/augmented_audio/greta1/greta1_avanti_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_avanti_timeshift.wav b/augmented_audio/greta1/greta1_avanti_timeshift.wav
+index 9ae36cb..274b52b 100644
+Binary files a/augmented_audio/greta1/greta1_avanti_timeshift.wav and b/augmented_audio/greta1/greta1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_cammina_noise.wav b/augmented_audio/greta1/greta1_cammina_noise.wav
+index a0d9c73..4fba295 100644
+Binary files a/augmented_audio/greta1/greta1_cammina_noise.wav and b/augmented_audio/greta1/greta1_cammina_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_cammina_timeshift.wav b/augmented_audio/greta1/greta1_cammina_timeshift.wav
+index 3872e23..fcf5b38 100644
+Binary files a/augmented_audio/greta1/greta1_cammina_timeshift.wav and b/augmented_audio/greta1/greta1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_continua_noise.wav b/augmented_audio/greta1/greta1_continua_noise.wav
+index e3352b3..e04693f 100644
+Binary files a/augmented_audio/greta1/greta1_continua_noise.wav and b/augmented_audio/greta1/greta1_continua_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_continua_timeshift.wav b/augmented_audio/greta1/greta1_continua_timeshift.wav
+index 4e79eee..fb22893 100644
+Binary files a/augmented_audio/greta1/greta1_continua_timeshift.wav and b/augmented_audio/greta1/greta1_continua_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_corri_noise.wav b/augmented_audio/greta1/greta1_corri_noise.wav
+index b666fe3..bd749b6 100644
+Binary files a/augmented_audio/greta1/greta1_corri_noise.wav and b/augmented_audio/greta1/greta1_corri_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_corri_timeshift.wav b/augmented_audio/greta1/greta1_corri_timeshift.wav
+index 48a9de3..8ae71f7 100644
+Binary files a/augmented_audio/greta1/greta1_corri_timeshift.wav and b/augmented_audio/greta1/greta1_corri_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_destra_noise.wav b/augmented_audio/greta1/greta1_destra_noise.wav
+index 984d7ea..a56759b 100644
+Binary files a/augmented_audio/greta1/greta1_destra_noise.wav and b/augmented_audio/greta1/greta1_destra_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_destra_timeshift.wav b/augmented_audio/greta1/greta1_destra_timeshift.wav
+index b60613a..34379b1 100644
+Binary files a/augmented_audio/greta1/greta1_destra_timeshift.wav and b/augmented_audio/greta1/greta1_destra_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_esci_noise.wav b/augmented_audio/greta1/greta1_esci_noise.wav
+index 9a4491f..1c854b7 100644
+Binary files a/augmented_audio/greta1/greta1_esci_noise.wav and b/augmented_audio/greta1/greta1_esci_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_esci_timeshift.wav b/augmented_audio/greta1/greta1_esci_timeshift.wav
+index 1ee7a65..ed535ba 100644
+Binary files a/augmented_audio/greta1/greta1_esci_timeshift.wav and b/augmented_audio/greta1/greta1_esci_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_fermo_noise.wav b/augmented_audio/greta1/greta1_fermo_noise.wav
+index 934eff5..8f5c1a3 100644
+Binary files a/augmented_audio/greta1/greta1_fermo_noise.wav and b/augmented_audio/greta1/greta1_fermo_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_fermo_timeshift.wav b/augmented_audio/greta1/greta1_fermo_timeshift.wav
+index b2e37ad..f1986bb 100644
+Binary files a/augmented_audio/greta1/greta1_fermo_timeshift.wav and b/augmented_audio/greta1/greta1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_giu_noise.wav b/augmented_audio/greta1/greta1_giu_noise.wav
+index 508a144..84b9b08 100644
+Binary files a/augmented_audio/greta1/greta1_giu_noise.wav and b/augmented_audio/greta1/greta1_giu_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_giu_timeshift.wav b/augmented_audio/greta1/greta1_giu_timeshift.wav
+index 4cf8127..8f1f2ae 100644
+Binary files a/augmented_audio/greta1/greta1_giu_timeshift.wav and b/augmented_audio/greta1/greta1_giu_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_indietro_noise.wav b/augmented_audio/greta1/greta1_indietro_noise.wav
+index cf77484..0acc421 100644
+Binary files a/augmented_audio/greta1/greta1_indietro_noise.wav and b/augmented_audio/greta1/greta1_indietro_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_indietro_timeshift.wav b/augmented_audio/greta1/greta1_indietro_timeshift.wav
+index 7f75ad8..c144460 100644
+Binary files a/augmented_audio/greta1/greta1_indietro_timeshift.wav and b/augmented_audio/greta1/greta1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_pausa_noise.wav b/augmented_audio/greta1/greta1_pausa_noise.wav
+index 984b385..1d5d736 100644
+Binary files a/augmented_audio/greta1/greta1_pausa_noise.wav and b/augmented_audio/greta1/greta1_pausa_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_pausa_timeshift.wav b/augmented_audio/greta1/greta1_pausa_timeshift.wav
+index 0683866..31e2253 100644
+Binary files a/augmented_audio/greta1/greta1_pausa_timeshift.wav and b/augmented_audio/greta1/greta1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_salta_noise.wav b/augmented_audio/greta1/greta1_salta_noise.wav
+index 00cd5c7..75684f8 100644
+Binary files a/augmented_audio/greta1/greta1_salta_noise.wav and b/augmented_audio/greta1/greta1_salta_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_salta_timeshift.wav b/augmented_audio/greta1/greta1_salta_timeshift.wav
+index 6b71067..2960dc4 100644
+Binary files a/augmented_audio/greta1/greta1_salta_timeshift.wav and b/augmented_audio/greta1/greta1_salta_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_sinistra_noise.wav b/augmented_audio/greta1/greta1_sinistra_noise.wav
+index 3a5c906..34b2459 100644
+Binary files a/augmented_audio/greta1/greta1_sinistra_noise.wav and b/augmented_audio/greta1/greta1_sinistra_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_sinistra_timeshift.wav b/augmented_audio/greta1/greta1_sinistra_timeshift.wav
+index 7790360..c3873b1 100644
+Binary files a/augmented_audio/greta1/greta1_sinistra_timeshift.wav and b/augmented_audio/greta1/greta1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_su_noise.wav b/augmented_audio/greta1/greta1_su_noise.wav
+index c140ce5..fa09af5 100644
+Binary files a/augmented_audio/greta1/greta1_su_noise.wav and b/augmented_audio/greta1/greta1_su_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_su_timeshift.wav b/augmented_audio/greta1/greta1_su_timeshift.wav
+index 2df6e4d..9b828ca 100644
+Binary files a/augmented_audio/greta1/greta1_su_timeshift.wav and b/augmented_audio/greta1/greta1_su_timeshift.wav differ
+diff --git a/augmented_audio/greta1/greta1_vola_noise.wav b/augmented_audio/greta1/greta1_vola_noise.wav
+index 99c3aeb..3f4b993 100644
+Binary files a/augmented_audio/greta1/greta1_vola_noise.wav and b/augmented_audio/greta1/greta1_vola_noise.wav differ
+diff --git a/augmented_audio/greta1/greta1_vola_timeshift.wav b/augmented_audio/greta1/greta1_vola_timeshift.wav
+index a78457b..d16b3f2 100644
+Binary files a/augmented_audio/greta1/greta1_vola_timeshift.wav and b/augmented_audio/greta1/greta1_vola_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_avanti_noise.wav b/augmented_audio/laura1/laura1_avanti_noise.wav
+index a048f2f..b6ca593 100644
+Binary files a/augmented_audio/laura1/laura1_avanti_noise.wav and b/augmented_audio/laura1/laura1_avanti_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_avanti_timeshift.wav b/augmented_audio/laura1/laura1_avanti_timeshift.wav
+index 4e3563c..b4849ca 100644
+Binary files a/augmented_audio/laura1/laura1_avanti_timeshift.wav and b/augmented_audio/laura1/laura1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_cammina_noise.wav b/augmented_audio/laura1/laura1_cammina_noise.wav
+index 1fb47f4..777e593 100644
+Binary files a/augmented_audio/laura1/laura1_cammina_noise.wav and b/augmented_audio/laura1/laura1_cammina_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_cammina_timeshift.wav b/augmented_audio/laura1/laura1_cammina_timeshift.wav
+index 9924588..3cc40a1 100644
+Binary files a/augmented_audio/laura1/laura1_cammina_timeshift.wav and b/augmented_audio/laura1/laura1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_continua_noise.wav b/augmented_audio/laura1/laura1_continua_noise.wav
+index 2a48d21..b302b94 100644
+Binary files a/augmented_audio/laura1/laura1_continua_noise.wav and b/augmented_audio/laura1/laura1_continua_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_continua_timeshift.wav b/augmented_audio/laura1/laura1_continua_timeshift.wav
+index 4a6a2c6..1f02d31 100644
+Binary files a/augmented_audio/laura1/laura1_continua_timeshift.wav and b/augmented_audio/laura1/laura1_continua_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_corri_noise.wav b/augmented_audio/laura1/laura1_corri_noise.wav
+index ceb147d..9b10c35 100644
+Binary files a/augmented_audio/laura1/laura1_corri_noise.wav and b/augmented_audio/laura1/laura1_corri_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_corri_timeshift.wav b/augmented_audio/laura1/laura1_corri_timeshift.wav
+index 1b03797..d52a681 100644
+Binary files a/augmented_audio/laura1/laura1_corri_timeshift.wav and b/augmented_audio/laura1/laura1_corri_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_destra_noise.wav b/augmented_audio/laura1/laura1_destra_noise.wav
+index c9f2c7e..02ae950 100644
+Binary files a/augmented_audio/laura1/laura1_destra_noise.wav and b/augmented_audio/laura1/laura1_destra_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_destra_timeshift.wav b/augmented_audio/laura1/laura1_destra_timeshift.wav
+index 0ab1df1..e2a4bbd 100644
+Binary files a/augmented_audio/laura1/laura1_destra_timeshift.wav and b/augmented_audio/laura1/laura1_destra_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_esci_noise.wav b/augmented_audio/laura1/laura1_esci_noise.wav
+index 12a5451..8a686a8 100644
+Binary files a/augmented_audio/laura1/laura1_esci_noise.wav and b/augmented_audio/laura1/laura1_esci_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_esci_timeshift.wav b/augmented_audio/laura1/laura1_esci_timeshift.wav
+index b1fe22d..66f6a5d 100644
+Binary files a/augmented_audio/laura1/laura1_esci_timeshift.wav and b/augmented_audio/laura1/laura1_esci_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_fermo_noise.wav b/augmented_audio/laura1/laura1_fermo_noise.wav
+index 009ee78..04652cb 100644
+Binary files a/augmented_audio/laura1/laura1_fermo_noise.wav and b/augmented_audio/laura1/laura1_fermo_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_fermo_timeshift.wav b/augmented_audio/laura1/laura1_fermo_timeshift.wav
+index 69ddfa0..885fdf6 100644
+Binary files a/augmented_audio/laura1/laura1_fermo_timeshift.wav and b/augmented_audio/laura1/laura1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_giu_noise.wav b/augmented_audio/laura1/laura1_giu_noise.wav
+index c2febc4..a911a6a 100644
+Binary files a/augmented_audio/laura1/laura1_giu_noise.wav and b/augmented_audio/laura1/laura1_giu_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_giu_timeshift.wav b/augmented_audio/laura1/laura1_giu_timeshift.wav
+index 136343c..b9bcf67 100644
+Binary files a/augmented_audio/laura1/laura1_giu_timeshift.wav and b/augmented_audio/laura1/laura1_giu_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_indietro_noise.wav b/augmented_audio/laura1/laura1_indietro_noise.wav
+index 4d84033..ecaf36d 100644
+Binary files a/augmented_audio/laura1/laura1_indietro_noise.wav and b/augmented_audio/laura1/laura1_indietro_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_indietro_timeshift.wav b/augmented_audio/laura1/laura1_indietro_timeshift.wav
+index 18aee41..f060d43 100644
+Binary files a/augmented_audio/laura1/laura1_indietro_timeshift.wav and b/augmented_audio/laura1/laura1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_pausa_noise.wav b/augmented_audio/laura1/laura1_pausa_noise.wav
+index ccb7ad1..3d79b8c 100644
+Binary files a/augmented_audio/laura1/laura1_pausa_noise.wav and b/augmented_audio/laura1/laura1_pausa_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_pausa_timeshift.wav b/augmented_audio/laura1/laura1_pausa_timeshift.wav
+index 25ba6e2..70823c8 100644
+Binary files a/augmented_audio/laura1/laura1_pausa_timeshift.wav and b/augmented_audio/laura1/laura1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_salta_noise.wav b/augmented_audio/laura1/laura1_salta_noise.wav
+index b96e618..6e29b8b 100644
+Binary files a/augmented_audio/laura1/laura1_salta_noise.wav and b/augmented_audio/laura1/laura1_salta_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_salta_timeshift.wav b/augmented_audio/laura1/laura1_salta_timeshift.wav
+index 82b8051..0843bed 100644
+Binary files a/augmented_audio/laura1/laura1_salta_timeshift.wav and b/augmented_audio/laura1/laura1_salta_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_sinistra_noise.wav b/augmented_audio/laura1/laura1_sinistra_noise.wav
+index a677dd6..f2db3e1 100644
+Binary files a/augmented_audio/laura1/laura1_sinistra_noise.wav and b/augmented_audio/laura1/laura1_sinistra_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_sinistra_timeshift.wav b/augmented_audio/laura1/laura1_sinistra_timeshift.wav
+index b872c83..022a0db 100644
+Binary files a/augmented_audio/laura1/laura1_sinistra_timeshift.wav and b/augmented_audio/laura1/laura1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_su_noise.wav b/augmented_audio/laura1/laura1_su_noise.wav
+index c06a8fe..9640c70 100644
+Binary files a/augmented_audio/laura1/laura1_su_noise.wav and b/augmented_audio/laura1/laura1_su_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_su_timeshift.wav b/augmented_audio/laura1/laura1_su_timeshift.wav
+index 2b85715..390c382 100644
+Binary files a/augmented_audio/laura1/laura1_su_timeshift.wav and b/augmented_audio/laura1/laura1_su_timeshift.wav differ
+diff --git a/augmented_audio/laura1/laura1_vola_noise.wav b/augmented_audio/laura1/laura1_vola_noise.wav
+index dac6fe7..69b1d82 100644
+Binary files a/augmented_audio/laura1/laura1_vola_noise.wav and b/augmented_audio/laura1/laura1_vola_noise.wav differ
+diff --git a/augmented_audio/laura1/laura1_vola_timeshift.wav b/augmented_audio/laura1/laura1_vola_timeshift.wav
+index 18c497c..b769048 100644
+Binary files a/augmented_audio/laura1/laura1_vola_timeshift.wav and b/augmented_audio/laura1/laura1_vola_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_avanti_noise.wav b/augmented_audio/laura2/laura2_avanti_noise.wav
+index c98fb53..e1a26d4 100644
+Binary files a/augmented_audio/laura2/laura2_avanti_noise.wav and b/augmented_audio/laura2/laura2_avanti_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_avanti_timeshift.wav b/augmented_audio/laura2/laura2_avanti_timeshift.wav
+index 590f620..e82f845 100644
+Binary files a/augmented_audio/laura2/laura2_avanti_timeshift.wav and b/augmented_audio/laura2/laura2_avanti_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_cammina_noise.wav b/augmented_audio/laura2/laura2_cammina_noise.wav
+index c7dad1b..68896e0 100644
+Binary files a/augmented_audio/laura2/laura2_cammina_noise.wav and b/augmented_audio/laura2/laura2_cammina_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_cammina_timeshift.wav b/augmented_audio/laura2/laura2_cammina_timeshift.wav
+index 8a5e5ff..546d488 100644
+Binary files a/augmented_audio/laura2/laura2_cammina_timeshift.wav and b/augmented_audio/laura2/laura2_cammina_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_continua_noise.wav b/augmented_audio/laura2/laura2_continua_noise.wav
+index bca77b4..e87da6e 100644
+Binary files a/augmented_audio/laura2/laura2_continua_noise.wav and b/augmented_audio/laura2/laura2_continua_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_continua_timeshift.wav b/augmented_audio/laura2/laura2_continua_timeshift.wav
+index 55cfb40..08e7394 100644
+Binary files a/augmented_audio/laura2/laura2_continua_timeshift.wav and b/augmented_audio/laura2/laura2_continua_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_corri_noise.wav b/augmented_audio/laura2/laura2_corri_noise.wav
+index 5bb2dc4..f2e16f2 100644
+Binary files a/augmented_audio/laura2/laura2_corri_noise.wav and b/augmented_audio/laura2/laura2_corri_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_corri_timeshift.wav b/augmented_audio/laura2/laura2_corri_timeshift.wav
+index cc5a066..fc55cef 100644
+Binary files a/augmented_audio/laura2/laura2_corri_timeshift.wav and b/augmented_audio/laura2/laura2_corri_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_destra_noise.wav b/augmented_audio/laura2/laura2_destra_noise.wav
+index 6644914..a149269 100644
+Binary files a/augmented_audio/laura2/laura2_destra_noise.wav and b/augmented_audio/laura2/laura2_destra_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_destra_timeshift.wav b/augmented_audio/laura2/laura2_destra_timeshift.wav
+index b0ae8d4..3618df5 100644
+Binary files a/augmented_audio/laura2/laura2_destra_timeshift.wav and b/augmented_audio/laura2/laura2_destra_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_esci_noise.wav b/augmented_audio/laura2/laura2_esci_noise.wav
+index f063b6a..a54544e 100644
+Binary files a/augmented_audio/laura2/laura2_esci_noise.wav and b/augmented_audio/laura2/laura2_esci_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_esci_timeshift.wav b/augmented_audio/laura2/laura2_esci_timeshift.wav
+index 0989cf1..471eb5d 100644
+Binary files a/augmented_audio/laura2/laura2_esci_timeshift.wav and b/augmented_audio/laura2/laura2_esci_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_fermo_noise.wav b/augmented_audio/laura2/laura2_fermo_noise.wav
+index 065d210..a5a1f88 100644
+Binary files a/augmented_audio/laura2/laura2_fermo_noise.wav and b/augmented_audio/laura2/laura2_fermo_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_fermo_timeshift.wav b/augmented_audio/laura2/laura2_fermo_timeshift.wav
+index a70e7fd..a110fa0 100644
+Binary files a/augmented_audio/laura2/laura2_fermo_timeshift.wav and b/augmented_audio/laura2/laura2_fermo_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_giu_noise.wav b/augmented_audio/laura2/laura2_giu_noise.wav
+index 300456d..ceb5359 100644
+Binary files a/augmented_audio/laura2/laura2_giu_noise.wav and b/augmented_audio/laura2/laura2_giu_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_giu_timeshift.wav b/augmented_audio/laura2/laura2_giu_timeshift.wav
+index d50477c..09da8e2 100644
+Binary files a/augmented_audio/laura2/laura2_giu_timeshift.wav and b/augmented_audio/laura2/laura2_giu_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_indietro_noise.wav b/augmented_audio/laura2/laura2_indietro_noise.wav
+index 37c579d..5d9602b 100644
+Binary files a/augmented_audio/laura2/laura2_indietro_noise.wav and b/augmented_audio/laura2/laura2_indietro_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_indietro_timeshift.wav b/augmented_audio/laura2/laura2_indietro_timeshift.wav
+index 4722b18..8845952 100644
+Binary files a/augmented_audio/laura2/laura2_indietro_timeshift.wav and b/augmented_audio/laura2/laura2_indietro_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_pausa_noise.wav b/augmented_audio/laura2/laura2_pausa_noise.wav
+index 7b38998..7438e6e 100644
+Binary files a/augmented_audio/laura2/laura2_pausa_noise.wav and b/augmented_audio/laura2/laura2_pausa_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_pausa_timeshift.wav b/augmented_audio/laura2/laura2_pausa_timeshift.wav
+index 123dc0a..a59ce27 100644
+Binary files a/augmented_audio/laura2/laura2_pausa_timeshift.wav and b/augmented_audio/laura2/laura2_pausa_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_salta_noise.wav b/augmented_audio/laura2/laura2_salta_noise.wav
+index 6ef89d2..2473132 100644
+Binary files a/augmented_audio/laura2/laura2_salta_noise.wav and b/augmented_audio/laura2/laura2_salta_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_salta_timeshift.wav b/augmented_audio/laura2/laura2_salta_timeshift.wav
+index 8a9ce42..4fa30f0 100644
+Binary files a/augmented_audio/laura2/laura2_salta_timeshift.wav and b/augmented_audio/laura2/laura2_salta_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_sinistra_noise.wav b/augmented_audio/laura2/laura2_sinistra_noise.wav
+index 43b28dc..a15f12e 100644
+Binary files a/augmented_audio/laura2/laura2_sinistra_noise.wav and b/augmented_audio/laura2/laura2_sinistra_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_sinistra_timeshift.wav b/augmented_audio/laura2/laura2_sinistra_timeshift.wav
+index fd413e5..48189c6 100644
+Binary files a/augmented_audio/laura2/laura2_sinistra_timeshift.wav and b/augmented_audio/laura2/laura2_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_su_noise.wav b/augmented_audio/laura2/laura2_su_noise.wav
+index e29e88a..a159079 100644
+Binary files a/augmented_audio/laura2/laura2_su_noise.wav and b/augmented_audio/laura2/laura2_su_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_su_timeshift.wav b/augmented_audio/laura2/laura2_su_timeshift.wav
+index d0cacf7..9c93253 100644
+Binary files a/augmented_audio/laura2/laura2_su_timeshift.wav and b/augmented_audio/laura2/laura2_su_timeshift.wav differ
+diff --git a/augmented_audio/laura2/laura2_vola_noise.wav b/augmented_audio/laura2/laura2_vola_noise.wav
+index 6270fed..03c0f89 100644
+Binary files a/augmented_audio/laura2/laura2_vola_noise.wav and b/augmented_audio/laura2/laura2_vola_noise.wav differ
+diff --git a/augmented_audio/laura2/laura2_vola_timeshift.wav b/augmented_audio/laura2/laura2_vola_timeshift.wav
+index 011bcec..7fe5364 100644
+Binary files a/augmented_audio/laura2/laura2_vola_timeshift.wav and b/augmented_audio/laura2/laura2_vola_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_avanti_noise.wav b/augmented_audio/mary1/mary1_avanti_noise.wav
+index 7a31f00..35c4f90 100644
+Binary files a/augmented_audio/mary1/mary1_avanti_noise.wav and b/augmented_audio/mary1/mary1_avanti_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_avanti_timeshift.wav b/augmented_audio/mary1/mary1_avanti_timeshift.wav
+index 317c0d1..0a24880 100644
+Binary files a/augmented_audio/mary1/mary1_avanti_timeshift.wav and b/augmented_audio/mary1/mary1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_cammina_noise.wav b/augmented_audio/mary1/mary1_cammina_noise.wav
+index 60da203..728d476 100644
+Binary files a/augmented_audio/mary1/mary1_cammina_noise.wav and b/augmented_audio/mary1/mary1_cammina_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_cammina_timeshift.wav b/augmented_audio/mary1/mary1_cammina_timeshift.wav
+index ae3a71e..cda5660 100644
+Binary files a/augmented_audio/mary1/mary1_cammina_timeshift.wav and b/augmented_audio/mary1/mary1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_continua_noise.wav b/augmented_audio/mary1/mary1_continua_noise.wav
+index 3386a78..ab7f0c7 100644
+Binary files a/augmented_audio/mary1/mary1_continua_noise.wav and b/augmented_audio/mary1/mary1_continua_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_continua_timeshift.wav b/augmented_audio/mary1/mary1_continua_timeshift.wav
+index 4738900..4ac7405 100644
+Binary files a/augmented_audio/mary1/mary1_continua_timeshift.wav and b/augmented_audio/mary1/mary1_continua_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_corri_noise.wav b/augmented_audio/mary1/mary1_corri_noise.wav
+index ec0cda0..7803388 100644
+Binary files a/augmented_audio/mary1/mary1_corri_noise.wav and b/augmented_audio/mary1/mary1_corri_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_corri_timeshift.wav b/augmented_audio/mary1/mary1_corri_timeshift.wav
+index c1db1df..21733c3 100644
+Binary files a/augmented_audio/mary1/mary1_corri_timeshift.wav and b/augmented_audio/mary1/mary1_corri_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_destra_noise.wav b/augmented_audio/mary1/mary1_destra_noise.wav
+index f4e0bcd..9710bcf 100644
+Binary files a/augmented_audio/mary1/mary1_destra_noise.wav and b/augmented_audio/mary1/mary1_destra_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_destra_timeshift.wav b/augmented_audio/mary1/mary1_destra_timeshift.wav
+index 25185b2..f105cb6 100644
+Binary files a/augmented_audio/mary1/mary1_destra_timeshift.wav and b/augmented_audio/mary1/mary1_destra_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_esci_noise.wav b/augmented_audio/mary1/mary1_esci_noise.wav
+index dde17a6..fdc4f27 100644
+Binary files a/augmented_audio/mary1/mary1_esci_noise.wav and b/augmented_audio/mary1/mary1_esci_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_esci_timeshift.wav b/augmented_audio/mary1/mary1_esci_timeshift.wav
+index 512bfe9..ea0ed83 100644
+Binary files a/augmented_audio/mary1/mary1_esci_timeshift.wav and b/augmented_audio/mary1/mary1_esci_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_fermo_noise.wav b/augmented_audio/mary1/mary1_fermo_noise.wav
+index 5efa32a..890feb6 100644
+Binary files a/augmented_audio/mary1/mary1_fermo_noise.wav and b/augmented_audio/mary1/mary1_fermo_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_fermo_timeshift.wav b/augmented_audio/mary1/mary1_fermo_timeshift.wav
+index f253d9b..77f676b 100644
+Binary files a/augmented_audio/mary1/mary1_fermo_timeshift.wav and b/augmented_audio/mary1/mary1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_giu_noise.wav b/augmented_audio/mary1/mary1_giu_noise.wav
+index f5aac7b..9cb4454 100644
+Binary files a/augmented_audio/mary1/mary1_giu_noise.wav and b/augmented_audio/mary1/mary1_giu_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_giu_timeshift.wav b/augmented_audio/mary1/mary1_giu_timeshift.wav
+index bd5e59e..5972dfc 100644
+Binary files a/augmented_audio/mary1/mary1_giu_timeshift.wav and b/augmented_audio/mary1/mary1_giu_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_indietro_noise.wav b/augmented_audio/mary1/mary1_indietro_noise.wav
+index 79fca81..3ff919f 100644
+Binary files a/augmented_audio/mary1/mary1_indietro_noise.wav and b/augmented_audio/mary1/mary1_indietro_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_indietro_timeshift.wav b/augmented_audio/mary1/mary1_indietro_timeshift.wav
+index a0d02ed..9cead46 100644
+Binary files a/augmented_audio/mary1/mary1_indietro_timeshift.wav and b/augmented_audio/mary1/mary1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_pausa_noise.wav b/augmented_audio/mary1/mary1_pausa_noise.wav
+index 3cfa322..351ffd7 100644
+Binary files a/augmented_audio/mary1/mary1_pausa_noise.wav and b/augmented_audio/mary1/mary1_pausa_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_pausa_timeshift.wav b/augmented_audio/mary1/mary1_pausa_timeshift.wav
+index 3d0195d..d591a88 100644
+Binary files a/augmented_audio/mary1/mary1_pausa_timeshift.wav and b/augmented_audio/mary1/mary1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_salta_noise.wav b/augmented_audio/mary1/mary1_salta_noise.wav
+index 886a48a..38787ae 100644
+Binary files a/augmented_audio/mary1/mary1_salta_noise.wav and b/augmented_audio/mary1/mary1_salta_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_salta_timeshift.wav b/augmented_audio/mary1/mary1_salta_timeshift.wav
+index aa96a05..aa690a9 100644
+Binary files a/augmented_audio/mary1/mary1_salta_timeshift.wav and b/augmented_audio/mary1/mary1_salta_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_sinistra_noise.wav b/augmented_audio/mary1/mary1_sinistra_noise.wav
+index 5bc53a2..4b4d06a 100644
+Binary files a/augmented_audio/mary1/mary1_sinistra_noise.wav and b/augmented_audio/mary1/mary1_sinistra_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_sinistra_timeshift.wav b/augmented_audio/mary1/mary1_sinistra_timeshift.wav
+index 42ac5ec..04400bc 100644
+Binary files a/augmented_audio/mary1/mary1_sinistra_timeshift.wav and b/augmented_audio/mary1/mary1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_su_noise.wav b/augmented_audio/mary1/mary1_su_noise.wav
+index 213acba..44558c7 100644
+Binary files a/augmented_audio/mary1/mary1_su_noise.wav and b/augmented_audio/mary1/mary1_su_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_su_timeshift.wav b/augmented_audio/mary1/mary1_su_timeshift.wav
+index 18cd798..69afe86 100644
+Binary files a/augmented_audio/mary1/mary1_su_timeshift.wav and b/augmented_audio/mary1/mary1_su_timeshift.wav differ
+diff --git a/augmented_audio/mary1/mary1_vola_noise.wav b/augmented_audio/mary1/mary1_vola_noise.wav
+index fbcc9f1..81423ea 100644
+Binary files a/augmented_audio/mary1/mary1_vola_noise.wav and b/augmented_audio/mary1/mary1_vola_noise.wav differ
+diff --git a/augmented_audio/mary1/mary1_vola_timeshift.wav b/augmented_audio/mary1/mary1_vola_timeshift.wav
+index 5a0492a..b9aae68 100644
+Binary files a/augmented_audio/mary1/mary1_vola_timeshift.wav and b/augmented_audio/mary1/mary1_vola_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_avanti_noise.wav b/augmented_audio/mary2/mary2_avanti_noise.wav
+index dda6edf..fac0c1e 100644
+Binary files a/augmented_audio/mary2/mary2_avanti_noise.wav and b/augmented_audio/mary2/mary2_avanti_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_avanti_timeshift.wav b/augmented_audio/mary2/mary2_avanti_timeshift.wav
+index 951b4f2..0d4cba5 100644
+Binary files a/augmented_audio/mary2/mary2_avanti_timeshift.wav and b/augmented_audio/mary2/mary2_avanti_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_cammina_noise.wav b/augmented_audio/mary2/mary2_cammina_noise.wav
+index c011ac7..9f53960 100644
+Binary files a/augmented_audio/mary2/mary2_cammina_noise.wav and b/augmented_audio/mary2/mary2_cammina_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_cammina_timeshift.wav b/augmented_audio/mary2/mary2_cammina_timeshift.wav
+index e5cb94b..18e2022 100644
+Binary files a/augmented_audio/mary2/mary2_cammina_timeshift.wav and b/augmented_audio/mary2/mary2_cammina_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_continua_noise.wav b/augmented_audio/mary2/mary2_continua_noise.wav
+index 39347ea..3dea4f5 100644
+Binary files a/augmented_audio/mary2/mary2_continua_noise.wav and b/augmented_audio/mary2/mary2_continua_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_continua_timeshift.wav b/augmented_audio/mary2/mary2_continua_timeshift.wav
+index c66cd5d..d7f0c85 100644
+Binary files a/augmented_audio/mary2/mary2_continua_timeshift.wav and b/augmented_audio/mary2/mary2_continua_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_corri_noise.wav b/augmented_audio/mary2/mary2_corri_noise.wav
+index 8c1c0a7..7cd0299 100644
+Binary files a/augmented_audio/mary2/mary2_corri_noise.wav and b/augmented_audio/mary2/mary2_corri_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_corri_timeshift.wav b/augmented_audio/mary2/mary2_corri_timeshift.wav
+index b51ef54..5828254 100644
+Binary files a/augmented_audio/mary2/mary2_corri_timeshift.wav and b/augmented_audio/mary2/mary2_corri_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_destra_noise.wav b/augmented_audio/mary2/mary2_destra_noise.wav
+index 969ca68..258e0d5 100644
+Binary files a/augmented_audio/mary2/mary2_destra_noise.wav and b/augmented_audio/mary2/mary2_destra_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_destra_timeshift.wav b/augmented_audio/mary2/mary2_destra_timeshift.wav
+index 80be974..90e03a1 100644
+Binary files a/augmented_audio/mary2/mary2_destra_timeshift.wav and b/augmented_audio/mary2/mary2_destra_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_esci_noise.wav b/augmented_audio/mary2/mary2_esci_noise.wav
+index 3061b04..467ca74 100644
+Binary files a/augmented_audio/mary2/mary2_esci_noise.wav and b/augmented_audio/mary2/mary2_esci_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_esci_timeshift.wav b/augmented_audio/mary2/mary2_esci_timeshift.wav
+index 90679f5..5c7edf8 100644
+Binary files a/augmented_audio/mary2/mary2_esci_timeshift.wav and b/augmented_audio/mary2/mary2_esci_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_fermo_noise.wav b/augmented_audio/mary2/mary2_fermo_noise.wav
+index 14148f2..5dbafc1 100644
+Binary files a/augmented_audio/mary2/mary2_fermo_noise.wav and b/augmented_audio/mary2/mary2_fermo_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_fermo_timeshift.wav b/augmented_audio/mary2/mary2_fermo_timeshift.wav
+index 778c711..318e662 100644
+Binary files a/augmented_audio/mary2/mary2_fermo_timeshift.wav and b/augmented_audio/mary2/mary2_fermo_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_giu_noise.wav b/augmented_audio/mary2/mary2_giu_noise.wav
+index 1446775..7c7e88b 100644
+Binary files a/augmented_audio/mary2/mary2_giu_noise.wav and b/augmented_audio/mary2/mary2_giu_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_giu_timeshift.wav b/augmented_audio/mary2/mary2_giu_timeshift.wav
+index 6e9f8ae..1521812 100644
+Binary files a/augmented_audio/mary2/mary2_giu_timeshift.wav and b/augmented_audio/mary2/mary2_giu_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_indietro_noise.wav b/augmented_audio/mary2/mary2_indietro_noise.wav
+index 8e420d2..c60c79d 100644
+Binary files a/augmented_audio/mary2/mary2_indietro_noise.wav and b/augmented_audio/mary2/mary2_indietro_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_indietro_timeshift.wav b/augmented_audio/mary2/mary2_indietro_timeshift.wav
+index 403b286..904613c 100644
+Binary files a/augmented_audio/mary2/mary2_indietro_timeshift.wav and b/augmented_audio/mary2/mary2_indietro_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_pausa_noise.wav b/augmented_audio/mary2/mary2_pausa_noise.wav
+index 2226779..233f488 100644
+Binary files a/augmented_audio/mary2/mary2_pausa_noise.wav and b/augmented_audio/mary2/mary2_pausa_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_pausa_timeshift.wav b/augmented_audio/mary2/mary2_pausa_timeshift.wav
+index 7cfd4d0..3517ffa 100644
+Binary files a/augmented_audio/mary2/mary2_pausa_timeshift.wav and b/augmented_audio/mary2/mary2_pausa_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_salta_noise.wav b/augmented_audio/mary2/mary2_salta_noise.wav
+index c3cb11d..fabfaf0 100644
+Binary files a/augmented_audio/mary2/mary2_salta_noise.wav and b/augmented_audio/mary2/mary2_salta_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_salta_timeshift.wav b/augmented_audio/mary2/mary2_salta_timeshift.wav
+index 3adaf27..13b043d 100644
+Binary files a/augmented_audio/mary2/mary2_salta_timeshift.wav and b/augmented_audio/mary2/mary2_salta_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_sinistra_noise.wav b/augmented_audio/mary2/mary2_sinistra_noise.wav
+index 9da4fca..961ff77 100644
+Binary files a/augmented_audio/mary2/mary2_sinistra_noise.wav and b/augmented_audio/mary2/mary2_sinistra_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_sinistra_timeshift.wav b/augmented_audio/mary2/mary2_sinistra_timeshift.wav
+index 3019bbc..47e3243 100644
+Binary files a/augmented_audio/mary2/mary2_sinistra_timeshift.wav and b/augmented_audio/mary2/mary2_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_su_noise.wav b/augmented_audio/mary2/mary2_su_noise.wav
+index 76fc533..bbc7cf1 100644
+Binary files a/augmented_audio/mary2/mary2_su_noise.wav and b/augmented_audio/mary2/mary2_su_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_su_timeshift.wav b/augmented_audio/mary2/mary2_su_timeshift.wav
+index 5ae4e0d..ca40d96 100644
+Binary files a/augmented_audio/mary2/mary2_su_timeshift.wav and b/augmented_audio/mary2/mary2_su_timeshift.wav differ
+diff --git a/augmented_audio/mary2/mary2_vola_noise.wav b/augmented_audio/mary2/mary2_vola_noise.wav
+index a70d19e..c891a25 100644
+Binary files a/augmented_audio/mary2/mary2_vola_noise.wav and b/augmented_audio/mary2/mary2_vola_noise.wav differ
+diff --git a/augmented_audio/mary2/mary2_vola_timeshift.wav b/augmented_audio/mary2/mary2_vola_timeshift.wav
+index fb55f54..e12c460 100644
+Binary files a/augmented_audio/mary2/mary2_vola_timeshift.wav and b/augmented_audio/mary2/mary2_vola_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_avanti_noise.wav b/augmented_audio/sara1/sara1_avanti_noise.wav
+index ca5e45b..554918d 100644
+Binary files a/augmented_audio/sara1/sara1_avanti_noise.wav and b/augmented_audio/sara1/sara1_avanti_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_avanti_timeshift.wav b/augmented_audio/sara1/sara1_avanti_timeshift.wav
+index 624db46..6a1f52f 100644
+Binary files a/augmented_audio/sara1/sara1_avanti_timeshift.wav and b/augmented_audio/sara1/sara1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_cammina_noise.wav b/augmented_audio/sara1/sara1_cammina_noise.wav
+index d6973f1..39c62de 100644
+Binary files a/augmented_audio/sara1/sara1_cammina_noise.wav and b/augmented_audio/sara1/sara1_cammina_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_cammina_timeshift.wav b/augmented_audio/sara1/sara1_cammina_timeshift.wav
+index 5f5fa8b..e17559a 100644
+Binary files a/augmented_audio/sara1/sara1_cammina_timeshift.wav and b/augmented_audio/sara1/sara1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_continua_noise.wav b/augmented_audio/sara1/sara1_continua_noise.wav
+index 6cdd8f6..12df950 100644
+Binary files a/augmented_audio/sara1/sara1_continua_noise.wav and b/augmented_audio/sara1/sara1_continua_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_continua_timeshift.wav b/augmented_audio/sara1/sara1_continua_timeshift.wav
+index 9e5cd63..5e04179 100644
+Binary files a/augmented_audio/sara1/sara1_continua_timeshift.wav and b/augmented_audio/sara1/sara1_continua_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_corri_noise.wav b/augmented_audio/sara1/sara1_corri_noise.wav
+index 4adfbaa..2248c9c 100644
+Binary files a/augmented_audio/sara1/sara1_corri_noise.wav and b/augmented_audio/sara1/sara1_corri_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_corri_timeshift.wav b/augmented_audio/sara1/sara1_corri_timeshift.wav
+index 7a15749..75a486f 100644
+Binary files a/augmented_audio/sara1/sara1_corri_timeshift.wav and b/augmented_audio/sara1/sara1_corri_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_destra_noise.wav b/augmented_audio/sara1/sara1_destra_noise.wav
+index 408ddcf..9ded0d4 100644
+Binary files a/augmented_audio/sara1/sara1_destra_noise.wav and b/augmented_audio/sara1/sara1_destra_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_destra_timeshift.wav b/augmented_audio/sara1/sara1_destra_timeshift.wav
+index 5dad15e..900f7a9 100644
+Binary files a/augmented_audio/sara1/sara1_destra_timeshift.wav and b/augmented_audio/sara1/sara1_destra_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_esci_noise.wav b/augmented_audio/sara1/sara1_esci_noise.wav
+index fd2c71a..6ef9fc7 100644
+Binary files a/augmented_audio/sara1/sara1_esci_noise.wav and b/augmented_audio/sara1/sara1_esci_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_esci_timeshift.wav b/augmented_audio/sara1/sara1_esci_timeshift.wav
+index c88ed23..974afec 100644
+Binary files a/augmented_audio/sara1/sara1_esci_timeshift.wav and b/augmented_audio/sara1/sara1_esci_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_fermo_noise.wav b/augmented_audio/sara1/sara1_fermo_noise.wav
+index 203f425..d976ff0 100644
+Binary files a/augmented_audio/sara1/sara1_fermo_noise.wav and b/augmented_audio/sara1/sara1_fermo_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_fermo_timeshift.wav b/augmented_audio/sara1/sara1_fermo_timeshift.wav
+index 324519e..66a83b2 100644
+Binary files a/augmented_audio/sara1/sara1_fermo_timeshift.wav and b/augmented_audio/sara1/sara1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_giu_noise.wav b/augmented_audio/sara1/sara1_giu_noise.wav
+index 5875f4b..82de1b0 100644
+Binary files a/augmented_audio/sara1/sara1_giu_noise.wav and b/augmented_audio/sara1/sara1_giu_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_giu_timeshift.wav b/augmented_audio/sara1/sara1_giu_timeshift.wav
+index 29407d6..a0c388e 100644
+Binary files a/augmented_audio/sara1/sara1_giu_timeshift.wav and b/augmented_audio/sara1/sara1_giu_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_indietro_noise.wav b/augmented_audio/sara1/sara1_indietro_noise.wav
+index 492b22c..1cb77d3 100644
+Binary files a/augmented_audio/sara1/sara1_indietro_noise.wav and b/augmented_audio/sara1/sara1_indietro_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_indietro_timeshift.wav b/augmented_audio/sara1/sara1_indietro_timeshift.wav
+index 9d90697..b1e7c61 100644
+Binary files a/augmented_audio/sara1/sara1_indietro_timeshift.wav and b/augmented_audio/sara1/sara1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_pausa_noise.wav b/augmented_audio/sara1/sara1_pausa_noise.wav
+index 35d74dc..1371e10 100644
+Binary files a/augmented_audio/sara1/sara1_pausa_noise.wav and b/augmented_audio/sara1/sara1_pausa_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_pausa_timeshift.wav b/augmented_audio/sara1/sara1_pausa_timeshift.wav
+index 9ab3ea3..ef56781 100644
+Binary files a/augmented_audio/sara1/sara1_pausa_timeshift.wav and b/augmented_audio/sara1/sara1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_salta_noise.wav b/augmented_audio/sara1/sara1_salta_noise.wav
+index ba12050..c1ac347 100644
+Binary files a/augmented_audio/sara1/sara1_salta_noise.wav and b/augmented_audio/sara1/sara1_salta_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_salta_timeshift.wav b/augmented_audio/sara1/sara1_salta_timeshift.wav
+index a21e25f..755d2d1 100644
+Binary files a/augmented_audio/sara1/sara1_salta_timeshift.wav and b/augmented_audio/sara1/sara1_salta_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_sinistra_noise.wav b/augmented_audio/sara1/sara1_sinistra_noise.wav
+index 6043d68..5467bd5 100644
+Binary files a/augmented_audio/sara1/sara1_sinistra_noise.wav and b/augmented_audio/sara1/sara1_sinistra_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_sinistra_timeshift.wav b/augmented_audio/sara1/sara1_sinistra_timeshift.wav
+index 122259a..a1f66c5 100644
+Binary files a/augmented_audio/sara1/sara1_sinistra_timeshift.wav and b/augmented_audio/sara1/sara1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_su_noise.wav b/augmented_audio/sara1/sara1_su_noise.wav
+index d21c27d..54c9203 100644
+Binary files a/augmented_audio/sara1/sara1_su_noise.wav and b/augmented_audio/sara1/sara1_su_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_su_timeshift.wav b/augmented_audio/sara1/sara1_su_timeshift.wav
+index be1f688..de2156e 100644
+Binary files a/augmented_audio/sara1/sara1_su_timeshift.wav and b/augmented_audio/sara1/sara1_su_timeshift.wav differ
+diff --git a/augmented_audio/sara1/sara1_vola_noise.wav b/augmented_audio/sara1/sara1_vola_noise.wav
+index a54d0f5..1baf79b 100644
+Binary files a/augmented_audio/sara1/sara1_vola_noise.wav and b/augmented_audio/sara1/sara1_vola_noise.wav differ
+diff --git a/augmented_audio/sara1/sara1_vola_timeshift.wav b/augmented_audio/sara1/sara1_vola_timeshift.wav
+index 6106cc2..a0b2dec 100644
+Binary files a/augmented_audio/sara1/sara1_vola_timeshift.wav and b/augmented_audio/sara1/sara1_vola_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_avanti_noise.wav b/augmented_audio/sara2/sara2_avanti_noise.wav
+index e4266b0..a2f4004 100644
+Binary files a/augmented_audio/sara2/sara2_avanti_noise.wav and b/augmented_audio/sara2/sara2_avanti_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_avanti_timeshift.wav b/augmented_audio/sara2/sara2_avanti_timeshift.wav
+index 135d4be..4840569 100644
+Binary files a/augmented_audio/sara2/sara2_avanti_timeshift.wav and b/augmented_audio/sara2/sara2_avanti_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_cammina_noise.wav b/augmented_audio/sara2/sara2_cammina_noise.wav
+index 28ba090..8768f8c 100644
+Binary files a/augmented_audio/sara2/sara2_cammina_noise.wav and b/augmented_audio/sara2/sara2_cammina_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_cammina_timeshift.wav b/augmented_audio/sara2/sara2_cammina_timeshift.wav
+index dbe8dce..81b7462 100644
+Binary files a/augmented_audio/sara2/sara2_cammina_timeshift.wav and b/augmented_audio/sara2/sara2_cammina_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_continua_noise.wav b/augmented_audio/sara2/sara2_continua_noise.wav
+index bb5e85b..833729b 100644
+Binary files a/augmented_audio/sara2/sara2_continua_noise.wav and b/augmented_audio/sara2/sara2_continua_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_continua_timeshift.wav b/augmented_audio/sara2/sara2_continua_timeshift.wav
+index 10143d5..c641716 100644
+Binary files a/augmented_audio/sara2/sara2_continua_timeshift.wav and b/augmented_audio/sara2/sara2_continua_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_corri_noise.wav b/augmented_audio/sara2/sara2_corri_noise.wav
+index ff365c4..842384f 100644
+Binary files a/augmented_audio/sara2/sara2_corri_noise.wav and b/augmented_audio/sara2/sara2_corri_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_corri_timeshift.wav b/augmented_audio/sara2/sara2_corri_timeshift.wav
+index 7575b59..ae22dca 100644
+Binary files a/augmented_audio/sara2/sara2_corri_timeshift.wav and b/augmented_audio/sara2/sara2_corri_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_destra_noise.wav b/augmented_audio/sara2/sara2_destra_noise.wav
+index 85c6b0c..03af88b 100644
+Binary files a/augmented_audio/sara2/sara2_destra_noise.wav and b/augmented_audio/sara2/sara2_destra_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_destra_timeshift.wav b/augmented_audio/sara2/sara2_destra_timeshift.wav
+index f541ec4..3253bb5 100644
+Binary files a/augmented_audio/sara2/sara2_destra_timeshift.wav and b/augmented_audio/sara2/sara2_destra_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_esci_noise.wav b/augmented_audio/sara2/sara2_esci_noise.wav
+index 095de87..6298d58 100644
+Binary files a/augmented_audio/sara2/sara2_esci_noise.wav and b/augmented_audio/sara2/sara2_esci_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_esci_timeshift.wav b/augmented_audio/sara2/sara2_esci_timeshift.wav
+index 96d3374..485b91e 100644
+Binary files a/augmented_audio/sara2/sara2_esci_timeshift.wav and b/augmented_audio/sara2/sara2_esci_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_fermo_noise.wav b/augmented_audio/sara2/sara2_fermo_noise.wav
+index 15c2fb6..f718d6f 100644
+Binary files a/augmented_audio/sara2/sara2_fermo_noise.wav and b/augmented_audio/sara2/sara2_fermo_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_fermo_timeshift.wav b/augmented_audio/sara2/sara2_fermo_timeshift.wav
+index 0443e6a..599c0e1 100644
+Binary files a/augmented_audio/sara2/sara2_fermo_timeshift.wav and b/augmented_audio/sara2/sara2_fermo_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_giu_noise.wav b/augmented_audio/sara2/sara2_giu_noise.wav
+index b7fbdc3..4c5d297 100644
+Binary files a/augmented_audio/sara2/sara2_giu_noise.wav and b/augmented_audio/sara2/sara2_giu_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_giu_timeshift.wav b/augmented_audio/sara2/sara2_giu_timeshift.wav
+index 30793b7..83cbf57 100644
+Binary files a/augmented_audio/sara2/sara2_giu_timeshift.wav and b/augmented_audio/sara2/sara2_giu_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_indietro_noise.wav b/augmented_audio/sara2/sara2_indietro_noise.wav
+index 826448d..383cbc1 100644
+Binary files a/augmented_audio/sara2/sara2_indietro_noise.wav and b/augmented_audio/sara2/sara2_indietro_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_indietro_timeshift.wav b/augmented_audio/sara2/sara2_indietro_timeshift.wav
+index bbeae1c..6abf22c 100644
+Binary files a/augmented_audio/sara2/sara2_indietro_timeshift.wav and b/augmented_audio/sara2/sara2_indietro_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_pausa_noise.wav b/augmented_audio/sara2/sara2_pausa_noise.wav
+index 81d6488..80e951e 100644
+Binary files a/augmented_audio/sara2/sara2_pausa_noise.wav and b/augmented_audio/sara2/sara2_pausa_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_pausa_timeshift.wav b/augmented_audio/sara2/sara2_pausa_timeshift.wav
+index 53447d8..ce84240 100644
+Binary files a/augmented_audio/sara2/sara2_pausa_timeshift.wav and b/augmented_audio/sara2/sara2_pausa_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_salta_noise.wav b/augmented_audio/sara2/sara2_salta_noise.wav
+index acc5c8e..a6f0e46 100644
+Binary files a/augmented_audio/sara2/sara2_salta_noise.wav and b/augmented_audio/sara2/sara2_salta_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_salta_timeshift.wav b/augmented_audio/sara2/sara2_salta_timeshift.wav
+index 8d6d134..00f94ce 100644
+Binary files a/augmented_audio/sara2/sara2_salta_timeshift.wav and b/augmented_audio/sara2/sara2_salta_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_sinistra_noise.wav b/augmented_audio/sara2/sara2_sinistra_noise.wav
+index 718ade9..f8d8f71 100644
+Binary files a/augmented_audio/sara2/sara2_sinistra_noise.wav and b/augmented_audio/sara2/sara2_sinistra_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_sinistra_timeshift.wav b/augmented_audio/sara2/sara2_sinistra_timeshift.wav
+index 6213e5d..e36f792 100644
+Binary files a/augmented_audio/sara2/sara2_sinistra_timeshift.wav and b/augmented_audio/sara2/sara2_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_su_noise.wav b/augmented_audio/sara2/sara2_su_noise.wav
+index 3596fb2..a38df97 100644
+Binary files a/augmented_audio/sara2/sara2_su_noise.wav and b/augmented_audio/sara2/sara2_su_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_su_timeshift.wav b/augmented_audio/sara2/sara2_su_timeshift.wav
+index 7e39bd7..2ac11b3 100644
+Binary files a/augmented_audio/sara2/sara2_su_timeshift.wav and b/augmented_audio/sara2/sara2_su_timeshift.wav differ
+diff --git a/augmented_audio/sara2/sara2_vola_noise.wav b/augmented_audio/sara2/sara2_vola_noise.wav
+index ad0107f..7b8a24b 100644
+Binary files a/augmented_audio/sara2/sara2_vola_noise.wav and b/augmented_audio/sara2/sara2_vola_noise.wav differ
+diff --git a/augmented_audio/sara2/sara2_vola_timeshift.wav b/augmented_audio/sara2/sara2_vola_timeshift.wav
+index 04f09e9..6c4406c 100644
+Binary files a/augmented_audio/sara2/sara2_vola_timeshift.wav and b/augmented_audio/sara2/sara2_vola_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_avanti_noise.wav b/augmented_audio/tes1/tes1_avanti_noise.wav
+index 5a2fbe0..0de014f 100644
+Binary files a/augmented_audio/tes1/tes1_avanti_noise.wav and b/augmented_audio/tes1/tes1_avanti_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_avanti_timeshift.wav b/augmented_audio/tes1/tes1_avanti_timeshift.wav
+index 12ce7ac..722b4d3 100644
+Binary files a/augmented_audio/tes1/tes1_avanti_timeshift.wav and b/augmented_audio/tes1/tes1_avanti_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_cammina_noise.wav b/augmented_audio/tes1/tes1_cammina_noise.wav
+index c69bb2d..5daf323 100644
+Binary files a/augmented_audio/tes1/tes1_cammina_noise.wav and b/augmented_audio/tes1/tes1_cammina_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_cammina_timeshift.wav b/augmented_audio/tes1/tes1_cammina_timeshift.wav
+index 66d1321..9395e0c 100644
+Binary files a/augmented_audio/tes1/tes1_cammina_timeshift.wav and b/augmented_audio/tes1/tes1_cammina_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_continua_noise.wav b/augmented_audio/tes1/tes1_continua_noise.wav
+index d99cbc2..7c9d4b2 100644
+Binary files a/augmented_audio/tes1/tes1_continua_noise.wav and b/augmented_audio/tes1/tes1_continua_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_continua_timeshift.wav b/augmented_audio/tes1/tes1_continua_timeshift.wav
+index 2f9304e..11bbb7b 100644
+Binary files a/augmented_audio/tes1/tes1_continua_timeshift.wav and b/augmented_audio/tes1/tes1_continua_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_corri_noise.wav b/augmented_audio/tes1/tes1_corri_noise.wav
+index cefea8f..7293225 100644
+Binary files a/augmented_audio/tes1/tes1_corri_noise.wav and b/augmented_audio/tes1/tes1_corri_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_corri_timeshift.wav b/augmented_audio/tes1/tes1_corri_timeshift.wav
+index dcd0038..a23c725 100644
+Binary files a/augmented_audio/tes1/tes1_corri_timeshift.wav and b/augmented_audio/tes1/tes1_corri_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_destra_noise.wav b/augmented_audio/tes1/tes1_destra_noise.wav
+index d5b210c..16537b0 100644
+Binary files a/augmented_audio/tes1/tes1_destra_noise.wav and b/augmented_audio/tes1/tes1_destra_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_destra_timeshift.wav b/augmented_audio/tes1/tes1_destra_timeshift.wav
+index 3818bb9..15c1d98 100644
+Binary files a/augmented_audio/tes1/tes1_destra_timeshift.wav and b/augmented_audio/tes1/tes1_destra_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_esci_noise.wav b/augmented_audio/tes1/tes1_esci_noise.wav
+index 2cbd0b4..a51ee29 100644
+Binary files a/augmented_audio/tes1/tes1_esci_noise.wav and b/augmented_audio/tes1/tes1_esci_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_esci_timeshift.wav b/augmented_audio/tes1/tes1_esci_timeshift.wav
+index 2734255..d61f286 100644
+Binary files a/augmented_audio/tes1/tes1_esci_timeshift.wav and b/augmented_audio/tes1/tes1_esci_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_fermo_noise.wav b/augmented_audio/tes1/tes1_fermo_noise.wav
+index c4c0a5e..4244a38 100644
+Binary files a/augmented_audio/tes1/tes1_fermo_noise.wav and b/augmented_audio/tes1/tes1_fermo_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_fermo_timeshift.wav b/augmented_audio/tes1/tes1_fermo_timeshift.wav
+index 2cb4bc6..a540025 100644
+Binary files a/augmented_audio/tes1/tes1_fermo_timeshift.wav and b/augmented_audio/tes1/tes1_fermo_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_giu_noise.wav b/augmented_audio/tes1/tes1_giu_noise.wav
+index eb3ddd2..e87d8e7 100644
+Binary files a/augmented_audio/tes1/tes1_giu_noise.wav and b/augmented_audio/tes1/tes1_giu_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_giu_timeshift.wav b/augmented_audio/tes1/tes1_giu_timeshift.wav
+index ad105dd..6266f66 100644
+Binary files a/augmented_audio/tes1/tes1_giu_timeshift.wav and b/augmented_audio/tes1/tes1_giu_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_indietro_noise.wav b/augmented_audio/tes1/tes1_indietro_noise.wav
+index 1990a51..1794fcd 100644
+Binary files a/augmented_audio/tes1/tes1_indietro_noise.wav and b/augmented_audio/tes1/tes1_indietro_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_indietro_timeshift.wav b/augmented_audio/tes1/tes1_indietro_timeshift.wav
+index 598d80a..9e6ade2 100644
+Binary files a/augmented_audio/tes1/tes1_indietro_timeshift.wav and b/augmented_audio/tes1/tes1_indietro_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_pausa_noise.wav b/augmented_audio/tes1/tes1_pausa_noise.wav
+index 793a827..a714aa7 100644
+Binary files a/augmented_audio/tes1/tes1_pausa_noise.wav and b/augmented_audio/tes1/tes1_pausa_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_pausa_timeshift.wav b/augmented_audio/tes1/tes1_pausa_timeshift.wav
+index 07ad4ea..ac88c09 100644
+Binary files a/augmented_audio/tes1/tes1_pausa_timeshift.wav and b/augmented_audio/tes1/tes1_pausa_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_salta_noise.wav b/augmented_audio/tes1/tes1_salta_noise.wav
+index 017f6db..f6ed1a1 100644
+Binary files a/augmented_audio/tes1/tes1_salta_noise.wav and b/augmented_audio/tes1/tes1_salta_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_salta_timeshift.wav b/augmented_audio/tes1/tes1_salta_timeshift.wav
+index 04c5939..69c91c3 100644
+Binary files a/augmented_audio/tes1/tes1_salta_timeshift.wav and b/augmented_audio/tes1/tes1_salta_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_sinistra_noise.wav b/augmented_audio/tes1/tes1_sinistra_noise.wav
+index 1e6caf4..225e9e5 100644
+Binary files a/augmented_audio/tes1/tes1_sinistra_noise.wav and b/augmented_audio/tes1/tes1_sinistra_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_sinistra_timeshift.wav b/augmented_audio/tes1/tes1_sinistra_timeshift.wav
+index 8f79c9e..e8ff506 100644
+Binary files a/augmented_audio/tes1/tes1_sinistra_timeshift.wav and b/augmented_audio/tes1/tes1_sinistra_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_su_noise.wav b/augmented_audio/tes1/tes1_su_noise.wav
+index 55b8a6f..c01ad33 100644
+Binary files a/augmented_audio/tes1/tes1_su_noise.wav and b/augmented_audio/tes1/tes1_su_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_su_timeshift.wav b/augmented_audio/tes1/tes1_su_timeshift.wav
+index 74d100b..9bb300b 100644
+Binary files a/augmented_audio/tes1/tes1_su_timeshift.wav and b/augmented_audio/tes1/tes1_su_timeshift.wav differ
+diff --git a/augmented_audio/tes1/tes1_vola_noise.wav b/augmented_audio/tes1/tes1_vola_noise.wav
+index d20ee5f..fabfbc3 100644
+Binary files a/augmented_audio/tes1/tes1_vola_noise.wav and b/augmented_audio/tes1/tes1_vola_noise.wav differ
+diff --git a/augmented_audio/tes1/tes1_vola_timeshift.wav b/augmented_audio/tes1/tes1_vola_timeshift.wav
+index a9c3928..874f592 100644
+Binary files a/augmented_audio/tes1/tes1_vola_timeshift.wav and b/augmented_audio/tes1/tes1_vola_timeshift.wav differ
+diff --git a/config.yaml b/config.yaml
+index c900c24..7c49b82 100644
+--- a/config.yaml
++++ b/config.yaml
+@@ -124,15 +124,15 @@ trainer:
+   benchmark: false
+ 
+ 
+-#exp_manager:
+-  #exp_dir: ./experiments
+-  #name: asr_experiment
+-  #create_tensorboard_logger: true
+-  #create_checkpoint_callback: false
+-  #checkpoint_callback_params:
+-    #monitor: val_epoch_top@1
+-    #mode: max
+-    #save_top_k: 3
+-    #filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
++exp_manager:
++  exp_dir: ./experiments
++  name: asr_experiment
++  create_tensorboard_logger: true
++  create_checkpoint_callback: false
++  checkpoint_callback_params:
++    monitor: val_epoch_top@1
++    mode: max
++    save_top_k: 3
++    filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
+ 
+  
+diff --git a/src/valutazioneModello.py b/src/valutazioneModello.py
+index d0857dd..fb89c17 100644
+--- a/src/valutazioneModello.py
++++ b/src/valutazioneModello.py
+@@ -4,28 +4,66 @@ import pytorch_lightning as pl
+ from omegaconf import OmegaConf
+ from nemo.collections.asr.models import EncDecClassificationModel
+ from nemo.utils.exp_manager import exp_manager
++from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
++from pytorch_lightning.loggers import TensorBoardLogger
+ import torch
+ 
+ def objective(trial):
+     # Carica la configurazione
+     cfg = OmegaConf.load("/home/giolinux/NLP_Project/config.yaml")
+ 
++    # Imposta il seed per la riproducibilità
++    pl.seed_everything(42)
++
+     # Scegli gli iperparametri da ottimizzare
+-    lr = trial.suggest_loguniform('lr', 1e-5, 1e-2)
++    lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+     dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+     batch_size = trial.suggest_categorical('batch_size', [4, 8, 16, 32])
+     filters = trial.suggest_categorical('filters', [64, 128, 256])
++    num_layers = trial.suggest_int('num_layers', 2, 5)
++    kernel_size = trial.suggest_int('kernel_size', 3, 11, step=2)
++    activation = trial.suggest_categorical('activation', ['relu', 'selu', 'gelu'])
++    weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
++    grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
++    optimizer = trial.suggest_categorical('optimizer', ['adam', 'sgd', 'adamw'])
++    scheduler = trial.suggest_categorical('scheduler', ['CosineAnnealing', 'StepLR', 'ExponentialLR'])
++    warmup_steps = trial.suggest_int('warmup_steps', 0, 1000)
++    label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
++    bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+ 
+     # Aggiorna la configurazione con gli iperparametri scelti
+     cfg.model.optim.lr = lr
+-    cfg.model.encoder.jasper[0].dropout = dropout
+-    cfg.model.encoder.jasper[1].dropout = dropout
+-    cfg.model.encoder.jasper[0].filters = filters
+-    cfg.model.encoder.jasper[1].filters = filters
+-    cfg.model.decoder.feat_in = filters
++    cfg.model.optim.weight_decay = weight_decay
++    cfg.model.optim.name = optimizer
++    cfg.model.optim.sched = {'name': scheduler, 'warmup_steps': warmup_steps}
++
++    cfg.trainer.gradient_clip_val = grad_clip
++
+     cfg.model.train_ds.batch_size = batch_size
+     cfg.model.validation_ds.batch_size = batch_size
+ 
++    # Aggiorna l'encoder con il numero di layer e altri parametri
++    cfg.model.encoder.jasper = []
++    for i in range(num_layers):
++        layer = {
++            'filters': filters,
++            'repeat': 1,
++            'kernel': [kernel_size],
++            'stride': [1],
++            'dilation': [1],
++            'dropout': dropout,
++            'residual': True if i > 0 else False,
++            'activation': activation,
++            'norm_kwargs': {'momentum': bn_momentum}
++        }
++        cfg.model.encoder.jasper.append(layer)
++    # Aggiorna il feat_in dell'encoder e del decoder
++    cfg.model.encoder.feat_in = cfg.model.preprocessor.features
++    cfg.model.decoder.feat_in = filters
++
++    # Aggiungi label smoothing se supportato
++    cfg.model.loss = {'label_smoothing': label_smoothing}
++
+     # Disabilita il checkpointing e il logging per velocizzare l'ottimizzazione
+     cfg.trainer.enable_checkpointing = False
+     cfg.trainer.logger = False
+@@ -33,15 +71,26 @@ def objective(trial):
+     cfg.exp_manager.create_tensorboard_logger = False
+ 
+     # Imposta il numero di epoch per una valutazione rapida
+-    cfg.trainer.max_epochs = 100
++    cfg.trainer.max_epochs = 10  # Puoi aumentare questo valore se hai più tempo
++
++    # Callback per Early Stopping
++    early_stop_callback = EarlyStopping(
++        monitor='val_loss',
++        patience=5,
++        verbose=False,
++        mode='min'
++    )
+ 
+-    # Imposta il trainer senza logger e checkpointing
++    # Configura il trainer
+     trainer = pl.Trainer(
+         max_epochs=cfg.trainer.max_epochs,
+         accelerator=cfg.trainer.accelerator,
+         devices=cfg.trainer.devices,
+         logger=False,
+-        enable_checkpointing=False
++        enable_checkpointing=False,
++        callbacks=[early_stop_callback],
++        precision=16,  # Abilita la precisione mista per accelerare l'addestramento
++        gradient_clip_val=grad_clip,
+     )
+ 
+     # Configura l'exp_manager
+@@ -54,8 +103,13 @@ def objective(trial):
+     asr_model.setup_training_data(train_data_config=cfg.model.train_ds)
+     asr_model.setup_validation_data(val_data_config=cfg.model.validation_ds)
+ 
+-    # Avvia l'addestramento
+-    trainer.fit(asr_model)
++    # Aggiungi un try-except per gestire eventuali errori
++    try:
++        # Avvia l'addestramento
++        trainer.fit(asr_model)
++    except Exception as e:
++        print(f"Errore durante l'addestramento: {e}")
++        return float('inf')
+ 
+     # Valuta il modello
+     result = trainer.validate(asr_model)
+@@ -63,6 +117,13 @@ def objective(trial):
+     # Ottieni la metrica da ottimizzare (ad esempio, val_loss)
+     val_loss = result[0]['val_loss']
+ 
++    # Registra la metrica intermedia per Optuna
++    trial.report(val_loss, step=cfg.trainer.max_epochs)
++
++    # Pruning
++    if trial.should_prune():
++        raise optuna.exceptions.TrialPruned()
++
+     # Restituisci la metrica per l'ottimizzazione
+     return val_loss
+ 
+@@ -73,16 +134,18 @@ if __name__ == '__main__':
+     # Specifica il percorso per il database SQLite
+     storage_name = "sqlite:///asr_study.db"
+ 
+-    # Crea uno studio Optuna con storage persistente
++    # Crea uno studio Optuna con storage persistente e pruner
++    pruner = optuna.pruners.MedianPruner()
+     study = optuna.create_study(
+         direction='minimize',
+         study_name='ASR_Hyperparameter_Optimization',
+         storage=storage_name,
+-        load_if_exists=True
++        load_if_exists=True,
++        pruner=pruner
+     )
+ 
+     # Esegui l'ottimizzazione
+-    study.optimize(objective, n_trials=5)
++    study.optimize(objective, n_trials=10)
+ 
+     # Stampa i migliori iperparametri trovati
+     print("I migliori iperparametri trovati sono:")

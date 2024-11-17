@@ -1,0 +1,1437 @@
+[NeMo I 2024-11-14 11:46:43 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:46:43 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 11:46:43 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 11:46:43 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:46:43 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 11:46:43 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 11:46:43 features:289] PADDING: 16
+[NeMo I 2024-11-14 11:46:44 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:46:44 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 11:46:44 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 11:46:44 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:46:44 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 11:46:44 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 11:46:44 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.9540111384580416e-05
+        maximize: False
+        weight_decay: 9.835335018604731e-06
+    )
+[NeMo I 2024-11-14 11:46:44 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f79ce0d00>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 823
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 11:46:45 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 11:51:38 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 11:51:38 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 11:51:38 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 11:51:39 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 11:51:39 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 11:51:39 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 11:51:39 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 11:51:39 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 11:51:39 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 11:51:39 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:51:39 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 11:51:39 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 11:51:39 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:51:39 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 11:51:39 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 11:51:39 features:289] PADDING: 16
+[NeMo I 2024-11-14 11:51:39 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:51:39 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 11:51:39 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 11:51:39 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:51:39 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 11:51:39 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 11:51:39 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.278911126483408e-05
+        maximize: False
+        weight_decay: 1.1427297262615103e-05
+    )
+[NeMo I 2024-11-14 11:51:39 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f7a598070>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 630
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 11:51:41 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 11:56:44 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 11:56:44 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 11:56:45 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 11:56:45 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 11:56:45 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 11:56:45 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 11:56:45 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 11:56:45 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 11:56:45 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 11:56:45 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:56:45 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 11:56:45 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 11:56:45 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:56:45 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 11:56:45 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 11:56:45 features:289] PADDING: 16
+[NeMo I 2024-11-14 11:56:45 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:56:45 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 11:56:45 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 11:56:45 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 11:56:45 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 11:56:45 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 11:56:45 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.6203309644224654e-05
+        maximize: False
+        weight_decay: 1.4569134808219159e-05
+    )
+[NeMo I 2024-11-14 11:56:45 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f5d777400>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 648
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 11:56:47 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:02:16 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:02:16 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:02:16 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:02:16 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:02:16 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:02:16 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:02:16 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:02:16 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:02:16 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:02:17 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:02:17 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:02:17 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:02:17 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:02:17 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:02:17 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:02:17 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:02:17 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:02:17 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:02:17 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:02:17 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:02:17 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:02:17 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:02:17 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.899336068561744e-05
+        maximize: False
+        weight_decay: 1.6274169876646496e-05
+    )
+[NeMo I 2024-11-14 12:02:17 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3e637c4f70>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 644
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 12:02:20 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:08:34 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:08:34 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:08:34 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:08:34 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:08:34 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:08:34 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:08:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:08:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:08:35 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:08:35 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:08:35 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:08:35 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:08:35 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:08:35 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:08:35 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:08:35 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:08:35 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:08:35 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:08:35 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:08:35 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:08:35 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:08:35 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:08:35 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 5.529438337949813e-05
+        maximize: False
+        weight_decay: 1.57491354003977e-05
+    )
+[NeMo I 2024-11-14 12:08:35 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f7a4b0460>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 597
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 12:08:37 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:15:11 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:15:11 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:15:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:15:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:15:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:15:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:15:12 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:15:12 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:15:12 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:15:12 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:15:12 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:15:12 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:15:12 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:15:12 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:15:12 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:15:12 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:15:12 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:15:12 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:15:12 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:15:12 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:15:12 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:15:12 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:15:13 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 5.770776372728559e-05
+        maximize: False
+        weight_decay: 1.7343091231740735e-05
+    )
+[NeMo I 2024-11-14 12:15:13 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f7a770760>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 585
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 12:15:16 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:18:39 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:18:39 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:18:39 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:18:39 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:18:40 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:18:40 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:18:40 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:18:40 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:18:40 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:18:40 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:18:40 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:18:40 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:18:40 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:18:40 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:18:40 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:18:40 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:18:41 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:18:41 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:18:41 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:18:41 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:18:41 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:18:41 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:18:41 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.46109814018186e-05
+        maximize: False
+        weight_decay: 1.5288271860521806e-05
+    )
+[NeMo I 2024-11-14 12:18:41 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f5d8368c0>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 629
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 12:18:43 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:25:17 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:25:17 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:25:18 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:25:19 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:25:19 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:25:19 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:25:19 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:25:19 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:25:19 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:25:19 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:25:19 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:25:19 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:25:19 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:25:19 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:25:19 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:25:19 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:25:19 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.691714466308291e-05
+        maximize: False
+        weight_decay: 1.545095598026375e-05
+    )
+[NeMo I 2024-11-14 12:25:19 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f60d70e20>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 610
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 12:25:21 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:32:41 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:32:43 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:32:43 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:32:43 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:32:43 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:32:43 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:32:43 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:32:43 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:32:43 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:32:43 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:32:43 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:32:43 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:32:43 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:32:43 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:32:43 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:32:43 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:32:44 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.2049463066985856e-05
+        maximize: False
+        weight_decay: 1.682311132924635e-05
+    )
+[NeMo I 2024-11-14 12:32:44 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f7a67e380>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 597
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 12:32:46 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:57:32 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:57:32 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:32 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:57:32 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:57:32 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:32 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:57:32 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:57:32 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:57:33 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:33 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:57:33 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:57:33 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:33 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:57:33 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:57:33 modelPT:723] Optimizer config = AdamW (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.279379037038947e-05
+        maximize: False
+        weight_decay: 1.5752513955184348e-05
+    )
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:57:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:57:34 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:57:34 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:34 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:57:34 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:57:34 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:34 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:57:34 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:57:34 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:57:34 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:34 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:57:34 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:57:34 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:34 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:57:34 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:57:34 modelPT:723] Optimizer config = SGD (
+    Parameter Group 0
+        dampening: 0
+        differentiable: False
+        foreach: None
+        fused: None
+        lr: 6.960821592561921e-05
+        maximize: False
+        momentum: 0
+        nesterov: False
+        weight_decay: 1.2063768308988273e-05
+    )
+[NeMo W 2024-11-14 12:57:34 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 12:57:35 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 12:57:36 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:36 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:57:36 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:57:36 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:36 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:57:36 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:57:36 features:289] PADDING: 16
+[NeMo I 2024-11-14 12:57:36 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:36 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 12:57:36 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 12:57:36 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 12:57:36 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 12:57:36 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 12:57:36 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.905772458429821e-05
+        maximize: False
+        weight_decay: 4.843358917406356e-05
+    )
+[NeMo I 2024-11-14 12:57:36 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3e603d7a30>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 534
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 12:57:38 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 13:04:58 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 13:04:59 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 13:04:59 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 13:04:59 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 13:04:59 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 13:04:59 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 13:04:59 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 13:04:59 features:289] PADDING: 16
+[NeMo I 2024-11-14 13:04:59 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 13:04:59 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 13:04:59 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 13:04:59 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 13:04:59 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 13:04:59 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 13:04:59 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 5.0615631990198925e-05
+        maximize: False
+        weight_decay: 4.232715012236418e-05
+    )
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 13:05:00 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 13:05:00 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 13:05:00 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 13:05:00 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 13:05:00 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 13:05:00 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 13:05:00 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 13:05:00 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 13:05:00 features:289] PADDING: 16
+[NeMo I 2024-11-14 13:05:00 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 13:05:00 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 13:05:00 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 13:05:00 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 13:05:00 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 13:05:00 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 13:05:00 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 6.31396774477792e-05
+        maximize: False
+        weight_decay: 9.572151587344752e-06
+    )
+[NeMo I 2024-11-14 13:05:00 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3e637efaf0>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 520
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 13:05:02 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 14:46:06 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 14:46:06 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 14:46:06 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 14:46:06 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:46:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 14:46:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:46:07 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 14:46:07 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 14:46:07 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 14:46:07 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:46:07 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 14:46:07 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 14:46:07 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:46:07 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 14:46:07 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 14:46:07 features:289] PADDING: 16
+[NeMo I 2024-11-14 14:46:07 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:46:07 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 14:46:07 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 14:46:07 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:46:07 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 14:46:07 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 14:46:08 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.297543676987397e-05
+        maximize: False
+        weight_decay: 3.748334392364435e-05
+    )
+[NeMo I 2024-11-14 14:46:08 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f7a5e2f80>" 
+    will be used during training (effective maximum steps = 2000) - 
+    Parameters : 
+    (warmup_steps: 527
+    max_steps: 2000
+    )
+[NeMo W 2024-11-14 14:46:09 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 14:48:02 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 14:48:02 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:48:02 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 14:48:02 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 14:48:02 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:48:02 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 14:48:02 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 14:48:02 features:289] PADDING: 16
+[NeMo I 2024-11-14 14:48:03 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:48:03 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 14:48:03 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 14:48:03 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:48:03 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 14:48:03 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 14:48:03 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.0911139763374575e-05
+        maximize: False
+        weight_decay: 3.0453458454038724e-05
+    )
+[NeMo I 2024-11-14 14:48:03 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f7a7502e0>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 661
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 14:48:06 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 14:55:28 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 14:55:29 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:55:29 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 14:55:29 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 14:55:29 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:55:29 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 14:55:29 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 14:55:29 features:289] PADDING: 16
+[NeMo I 2024-11-14 14:55:29 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:55:29 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 14:55:29 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 14:55:29 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 14:55:29 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 14:55:29 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 14:55:29 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 8.213806255732593e-05
+        maximize: False
+        weight_decay: 2.9295507282241553e-05
+    )
+[NeMo I 2024-11-14 14:55:29 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3e621b19c0>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 646
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 14:55:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:00:13 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 15:00:13 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 15:00:13 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:00:13 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:00:13 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:00:13 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:00:13 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:00:13 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:00:13 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:00:13 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:00:13 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:00:13 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:00:13 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:00:13 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:00:13 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:00:13 modelPT:723] Optimizer config = SGD (
+    Parameter Group 0
+        dampening: 0
+        differentiable: False
+        foreach: None
+        fused: None
+        lr: 4.960424081384337e-05
+        maximize: False
+        momentum: 0
+        nesterov: False
+        weight_decay: 7.261414243688719e-06
+    )
+[NeMo I 2024-11-14 15:00:13 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f5d5566b0>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 585
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 15:00:16 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:05:10 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:05:10 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:05:10 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:05:10 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:05:11 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:05:11 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:05:11 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:05:11 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 15:05:11 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 15:05:11 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:05:11 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:05:11 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:05:11 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:05:11 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:05:11 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:05:11 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:05:11 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:05:11 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:05:11 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:05:11 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:05:11 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:05:11 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:05:11 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.164669852008305e-05
+        maximize: False
+        weight_decay: 8.931893603293535e-05
+    )
+[NeMo I 2024-11-14 15:05:11 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f5d68f310>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 647
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 15:05:13 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:09:30 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:09:30 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 15:09:31 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 15:09:31 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:09:31 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:09:31 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:09:31 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:09:31 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:09:31 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:09:31 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:09:31 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:09:31 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:09:31 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:09:31 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:09:31 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:09:31 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:09:32 modelPT:723] Optimizer config = AdamW (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 5.3981676998099376e-05
+        maximize: False
+        weight_decay: 2.6481062380804067e-05
+    )
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 15:09:32 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 15:09:32 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:09:32 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:09:32 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:09:32 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:09:32 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:09:32 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:09:32 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:09:33 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:09:33 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:09:33 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:09:33 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:09:33 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:09:33 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:09:33 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 3.902267364427965e-05
+        maximize: False
+        weight_decay: 9.321941138180085e-06
+    )
+[NeMo I 2024-11-14 15:09:33 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3e637ee620>" 
+    will be used during training (effective maximum steps = 3950) - 
+    Parameters : 
+    (warmup_steps: 668
+    max_steps: 3950
+    )
+[NeMo W 2024-11-14 15:09:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:11:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:11:59 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:11:59 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 15:11:59 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 15:11:59 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:11:59 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:11:59 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:11:59 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:11:59 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:11:59 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:11:59 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:11:59 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:11:59 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:11:59 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:11:59 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:11:59 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:11:59 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:11:59 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.6726413800310775e-05
+        maximize: False
+        weight_decay: 2.224412952134899e-05
+    )
+[NeMo I 2024-11-14 15:11:59 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3e603d49a0>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 571
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 15:12:01 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:19:00 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:19:00 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 15:19:00 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 15:19:00 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:19:00 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:19:00 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:19:00 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:19:00 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:19:00 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:19:00 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:19:00 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:19:00 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:19:00 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:19:00 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:19:00 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:19:00 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:19:01 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 4.6304221518459625e-05
+        maximize: False
+        weight_decay: 6.310277714043242e-05
+    )
+[NeMo I 2024-11-14 15:19:01 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f79cfd090>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 563
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 15:19:02 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:23:26 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:23:26 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 15:23:27 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 15:23:27 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:23:27 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:23:27 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:23:27 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:23:27 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:23:27 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:23:27 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:23:27 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:23:27 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:23:27 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:23:27 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:23:27 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:23:27 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:23:28 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 7.103513316846994e-05
+        maximize: False
+        weight_decay: 1.681408218739563e-05
+    )
+[NeMo I 2024-11-14 15:23:28 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f7a6b8910>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 457
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 15:23:30 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo I 2024-11-14 15:29:07 exp_manager:396] Experiments will be logged at experiments/asr_experiment/2024-11-13_18-06-26
+[NeMo I 2024-11-14 15:29:08 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:29:08 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:29:08 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:29:08 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:29:08 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:29:08 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:29:08 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:29:08 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:29:08 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:29:08 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:29:08 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:29:08 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:29:08 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:29:08 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 3.723753213751204e-05
+        maximize: False
+        weight_decay: 0.0002935758514547094
+    )
+[NeMo I 2024-11-14 15:29:08 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f6a50bd60>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 604
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 15:29:10 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    

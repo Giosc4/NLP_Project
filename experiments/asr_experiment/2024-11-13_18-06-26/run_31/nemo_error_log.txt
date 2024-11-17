@@ -1,0 +1,477 @@
+[NeMo W 2024-11-14 12:18:43 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:25:17 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:25:17 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:25:18 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 12:25:21 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:32:41 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:32:42 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:32:43 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 12:32:46 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:57:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:57:33 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:57:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 12:57:34 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 12:57:35 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 12:57:38 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 13:04:58 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 13:04:59 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 13:05:00 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 13:05:02 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 14:46:06 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 14:46:06 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 14:46:06 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 14:46:06 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:46:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 14:46:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:46:07 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 14:46:07 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 14:46:09 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 14:48:02 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 14:48:06 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 14:55:28 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 14:55:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:00:12 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:00:13 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 15:00:16 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:05:10 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:05:10 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:05:10 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:05:10 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:05:11 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:05:11 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:05:11 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:05:11 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 15:05:13 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:09:30 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:09:30 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:09:31 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:09:32 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 15:09:34 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:11:58 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:11:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:11:59 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:11:59 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 15:12:01 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:18:59 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:19:00 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:19:00 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 15:19:02 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:23:26 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:23:26 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:23:27 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 15:23:30 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:19: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:20: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:26: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+      weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:27: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:31: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/NLP_Project/src/valutazioneModello.py:32: FutureWarning: suggest_uniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float instead.
+      bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/lightning_fabric/connector.py:554: UserWarning: 16 is supported for historical reasons but its usage is discouraged. Please set your precision to 16-mixed instead!
+      rank_zero_warn(
+    
+[NeMo W 2024-11-14 15:29:07 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/pytorch_lightning/plugins/precision/amp.py:53: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+      scaler = torch.cuda.amp.GradScaler()
+    
+[NeMo W 2024-11-14 15:29:10 nemo_logging:349] /home/giolinux/miniconda3/envs/NLP_project/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    

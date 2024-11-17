@@ -1,21 +1,7 @@
 name: ASR_Project
 model:
   sample_rate: 16000
-  labels:
-    - avanti
-    - indietro
-    - sinistra
-    - destra
-    - cammina
-    - corri
-    - fermo
-    - salta
-    - vola
-    - su
-    - giu
-    - pausa
-    - continua
-    - esci
+  labels: [avanti, indietro, sinistra, destra, cammina, corri, fermo, salta, vola, su, giu, pausa, continua, esci]
 
   preprocessor:
     _target_: nemo.collections.asr.modules.AudioToMelSpectrogramPreprocessor
@@ -42,14 +28,14 @@ model:
       kernel: [11]
       stride: [1]
       dilation: [1]
-      dropout: 0.11590688029200186
+      dropout: 0.2359019959569378
       residual: false
     - filters: 256
       repeat: 1
       kernel: [13]
       stride: [1]
       dilation: [1]
-      dropout: 0.11590688029200186
+      dropout: 0.2359019959569378
       residual: true
 
 
@@ -106,7 +92,7 @@ model:
 
   optim:
     name: adam
-    lr: 0.0012424318997362363
+    lr: 5.529438337949813e-05
     weight_decay: 0.0001
 
 trainer:
@@ -124,15 +110,15 @@ trainer:
   benchmark: false
 
 
-#exp_manager:
-  #exp_dir: ./experiments
-  #name: asr_experiment
-  #create_tensorboard_logger: true
-  #create_checkpoint_callback: false
-  #checkpoint_callback_params:
-    #monitor: val_epoch_top@1
-    #mode: max
-    #save_top_k: 3
-    #filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
+exp_manager:
+  exp_dir: ./experiments
+  name: asr_experiment
+  create_tensorboard_logger: true
+  create_checkpoint_callback: false
+  checkpoint_callback_params:
+    monitor: val_epoch_top@1
+    mode: max
+    save_top_k: 3
+    filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
 
  

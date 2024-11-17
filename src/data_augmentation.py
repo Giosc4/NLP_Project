@@ -71,6 +71,13 @@ def augment_data(input_dir, output_dir, sample_rate=16000):
                                    
 
 if __name__ == "__main__":
+
+    # Esegui il primo script di data augmentation
+    script1 = '/home/giolinux/NLP_Project/src/manifest.py'
+    result1 = subprocess.run(['python3', script1], capture_output=True, text=True)
+    print(f"Uscita di {script1}:\n{result1.stdout}")
+    if result1.stderr:
+        print(f"Errori di {script1}:\n{result1.stderr}")
     input_directory = '/home/giolinux/NLP_Project/audio'          # Sostituisci con il tuo percorso di input
     output_directory = '/home/giolinux/NLP_Project/augmented_audio'  # Sostituisci con il tuo percorso di output
     augment_data(input_directory, output_directory)
