@@ -10,7 +10,7 @@ import torch
 
 def objective(trial):
     # Carica la configurazione
-    cfg = OmegaConf.load("/home/giolinux/NLP_Project/config.yaml")
+    cfg = OmegaConf.load("/home/giolinux/NLP/NLP_Project/config.yaml")
 
     # Imposta il seed per la riproducibilità
     pl.seed_everything(42)

@@ -9,7 +9,7 @@ import torch
 import subprocess
 
 # Esegui il primo script di data augmentation
-script1 = '/home/giolinux/NLP_Project/src/data_augmentation.py'
+script1 = '/home/giolinux/NLP/NLP_Project/src/data_augmentation.py'
 result1 = subprocess.run(['python3', script1], capture_output=True, text=True)
 print(f"Uscita di {script1}:\n{result1.stdout}")
 if result1.stderr:
@@ -19,11 +19,11 @@ if result1.stderr:
 torch.set_float32_matmul_precision('high')
 
 # Carica il file di configurazione aggiornato
-cfg = OmegaConf.load("/home/giolinux/NLP_Project/config.yaml")
+cfg = OmegaConf.load("/home/giolinux/NLP/NLP_Project/config.yaml")
 
 # Imposta il manifest per il training e la validazione
-cfg.model.train_ds.manifest_filepath = "/home/giolinux/NLP_Project/train_manifest_augmented.json"
-cfg.model.validation_ds.manifest_filepath = "/home/giolinux/NLP_Project/val_manifest.json"
+cfg.model.train_ds.manifest_filepath = "/home/giolinux/NLP/NLP_Project/train_manifest_augmented.json"
+cfg.model.validation_ds.manifest_filepath = "/home/giolinux/NLP/NLP_Project/val_manifest.json"
 
 # Configura il trainer
 trainer = pl.Trainer(
@@ -53,13 +53,13 @@ trainer.fit(asr_model)
 trainer.validate(asr_model)
 
 # Salva il modello addestrato
-model_save_path = "/home/giolinux/NLP_Project/asr_model.nemo"
+model_save_path = "/home/giolinux/NLP/NLP_Project/asr_model.nemo"
 asr_model.save_to(model_save_path)
 
 print(f"Training completato, modello salvato in {model_save_path}")
 
 # Esegui il secondo script
-script2 = '/home/giolinux/NLP_Project/src/evaluate_model.py'
+script2 = '/home/giolinux/NLP/NLP_Project/src/evaluate_model.py'
 result2 = subprocess.run(['python3', script2], capture_output=True, text=True)
 print(f"Uscita di {script2}:\n{result2.stdout}")
 if result2.stderr:

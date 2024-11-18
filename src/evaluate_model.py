@@ -23,7 +23,8 @@ class ASRInference:
     def transcribe_audio(self):
         # Esegue la trascrizione per i file audio specificati
         with torch.no_grad():  # Disabilita il calcolo dei gradienti per ottimizzare la memoria
-            transcriptions = self.model.transcribe(paths2audio_files=self.audio_paths)
+            # Usa il metodo transcribe() corretto per la tua versione di NeMo
+            transcriptions = self.model.transcribe(self.audio_paths)
         return transcriptions
 
     def extract_label_from_path(self, path):
@@ -90,8 +91,8 @@ class ASRInference:
                 print(f"   Predizione Modello: {pred}\n")
 
 # Parametri per l'inferenza
-model_path = "/home/giolinux/NLP_Project/asr_model.nemo"
-val_manifest = "/home/giolinux/NLP_Project/val_manifest.json"
+model_path = "/home/giolinux/NLP/NLP_Project/asr_model.nemo"
+val_manifest = "/home/giolinux/NLP/NLP_Project/val_manifest.json"
 labels = [
     "avanti", "cammina", "continua", "corri", "destra", "esci",
     "fermo", "giu", "indietro", "pausa", "salta", "sinistra", "su", "vola"

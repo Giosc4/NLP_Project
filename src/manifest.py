@@ -48,11 +48,11 @@ def split_manifest(manifest_path, train_manifest_path, val_manifest_path, train_
     print(f"Divisione completata: {len(train_data)} campioni per il training, {len(val_data)} campioni per la validazione.")
 
 # Directory dei file audio originali
-data_dir = '/home/giolinux/NLP_Project/audio'
+data_dir = '/home/giolinux/NLP/NLP_Project/audio'
 # Percorsi per i manifest
-data_manifest_path = '/home/giolinux/NLP_Project/data_manifest.json'
-train_manifest_path = '/home/giolinux/NLP_Project/train_manifest.json'
-val_manifest_path = '/home/giolinux/NLP_Project/val_manifest.json'
+data_manifest_path = '/home/giolinux/NLP/NLP_Project/data_manifest.json'
+train_manifest_path = '/home/giolinux/NLP/NLP_Project/train_manifest.json'
+val_manifest_path = '/home/giolinux/NLP/NLP_Project/val_manifest.json'
 
 # Crea il manifest principale con i dati originali
 create_manifest(data_dir, data_manifest_path)
