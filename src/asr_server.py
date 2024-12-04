@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # Carica il modello .nemo
-model = EncDecCTCModel.restore_from("asr_model.nemo")
+model = EncDecCTCModel.restore_from("../asr_model.nemo")
 
 # Lista delle etichette corrispondenti agli indici
 labels = [
