@@ -1,0 +1,35 @@
+[NeMo I 2024-11-14 15:29:08 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:29:08 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:29:08 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:29:08 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:29:08 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:29:08 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:29:08 features:289] PADDING: 16
+[NeMo I 2024-11-14 15:29:08 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:29:08 collections:446] Dataset loaded with 1254 items, total duration of  0.26 hours.
+[NeMo I 2024-11-14 15:29:08 collections:448] # 1254 files loaded accounting to # 14 labels
+[NeMo I 2024-11-14 15:29:08 collections:445] Filtered duration for loading collection is  0.00 hours.
+[NeMo I 2024-11-14 15:29:08 collections:446] Dataset loaded with 42 items, total duration of  0.01 hours.
+[NeMo I 2024-11-14 15:29:08 collections:448] # 42 files loaded accounting to # 13 labels
+[NeMo I 2024-11-14 15:29:08 modelPT:723] Optimizer config = Adam (
+    Parameter Group 0
+        amsgrad: False
+        betas: (0.9, 0.999)
+        capturable: False
+        differentiable: False
+        eps: 1e-08
+        foreach: None
+        fused: None
+        lr: 3.723753213751204e-05
+        maximize: False
+        weight_decay: 0.0002935758514547094
+    )
+[NeMo I 2024-11-14 15:29:08 lr_scheduler:915] Scheduler "<nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7f3f6a50bd60>" 
+    will be used during training (effective maximum steps = 15700) - 
+    Parameters : 
+    (warmup_steps: 604
+    max_steps: 15700
+    )
+[NeMo W 2024-11-14 15:29:10 nemo_logging:349] /home/giova/miniconda3/envs/NLP/NLP_Project-main/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+      with torch.cuda.amp.autocast(enabled=False):
+    

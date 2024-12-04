@@ -1,0 +1,124 @@
+name: ASR_Project
+model:
+  sample_rate: 16000
+  labels: [avanti, indietro, sinistra, destra, cammina, corri, fermo, salta, vola, su, giu, pausa, continua, esci]
+
+  preprocessor:
+    _target_: nemo.collections.asr.modules.AudioToMelSpectrogramPreprocessor
+    normalize: "per_feature"
+    window_size: 0.02
+    sample_rate: 16000
+    window_stride: 0.01
+    window: "hann"
+    features: 64
+    n_fft: 512
+    frame_splicing: 1
+    dither: 0.00001
+    stft_conv: false
+
+
+  encoder:
+    _target_: nemo.collections.asr.modules.ConvASREncoder
+    feat_in: 64
+    activation: relu
+    conv_mask: true
+    jasper:
+    - filters: 256
+      repeat: 1
+      kernel: [11]
+      stride: [1]
+      dilation: [1]
+      dropout: 0.2359019959569378
+      residual: false
+    - filters: 256
+      repeat: 1
+      kernel: [13]
+      stride: [1]
+      dilation: [1]
+      dropout: 0.2359019959569378
+      residual: true
+
+
+
+  decoder:
+    _target_: nemo.collections.asr.modules.ConvASRDecoderClassification
+    feat_in: 256  # Deve corrispondere a `filters` dell'ultimo blocco dell'encoder
+    num_classes: 14
+
+  train_ds:
+    manifest_filepath: "/home/giova/NLP_Project/train_manifest_augmented.json"
+    batch_size: 8
+    shuffle: true
+    num_workers: 4
+    sample_rate: 16000
+    labels:
+      - avanti
+      - indietro
+      - sinistra
+      - destra
+      - cammina
+      - corri
+      - fermo
+      - salta
+      - vola
+      - su
+      - giu
+      - pausa
+      - continua
+      - esci
+
+  validation_ds:
+    manifest_filepath: "/home/giova/NLP_Project/val_manifest.json"
+    batch_size: 8
+    shuffle: false
+    num_workers: 8
+    pin_memory: true
+    sample_rate: 16000
+    labels:
+      - avanti
+      - indietro
+      - sinistra
+      - destra
+      - cammina
+      - corri
+      - fermo
+      - salta
+      - vola
+      - su
+      - giu
+      - pausa
+      - continua
+      - esci
+
+  optim:
+    name: adam
+    lr: 5.529438337949813e-05
+    weight_decay: 0.0001
+
+trainer:
+  devices: 1  # number of GPUs
+  max_epochs: 100 
+  max_steps: -1
+  num_nodes: 1
+  accelerator: gpu
+  strategy: ddp
+  accumulate_grad_batches: 1
+  enable_checkpointing: false
+  logger: true
+  log_every_n_steps: 1
+  val_check_interval: 1.0
+  benchmark: false
+
+
+exp_manager:
+  exp_dir: ./experiments
+  name: asr_experiment
+  create_tensorboard_logger: true
+  create_checkpoint_callback: false
+  checkpoint_callback_params:
+    monitor: val_epoch_top@1
+    mode: max
+    save_top_k: 3
+    filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
+
+ 
