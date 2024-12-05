@@ -3,49 +3,32 @@ import optuna
 import pytorch_lightning as pl
 from omegaconf import OmegaConf
 from nemo.collections.asr.models import EncDecClassificationModel
-from nemo.utils.exp_manager import exp_manager
-from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
-from pytorch_lightning.loggers import TensorBoardLogger
+from pytorch_lightning.callbacks import EarlyStopping
 import torch
+
+def log_metric(epoch, metric, value):
+    print(f"Epoch {epoch}, {metric}: {value}")
 
 def objective(trial):
     # Carica la configurazione
-    cfg = OmegaConf.load("/home/giova/NLP_Project/config.yaml")
+    cfg = OmegaConf.load("../config.yaml")
 
     # Imposta il seed per la riproducibilità
     pl.seed_everything(42)
 
-    # Scegli gli iperparametri da ottimizzare
-    lr = trial.suggest_loguniform('lr', 1e-5, 1e-3)
-    dropout = trial.suggest_uniform('dropout', 0.1, 0.5)
-    batch_size = trial.suggest_categorical('batch_size', [4, 8, 16, 32])
-    filters = trial.suggest_categorical('filters', [64, 128, 256])
-    num_layers = trial.suggest_int('num_layers', 2, 5)
-    kernel_size = trial.suggest_int('kernel_size', 3, 11, step=2)
-    activation = trial.suggest_categorical('activation', ['relu', 'selu', 'gelu'])
-    weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-2)
-    grad_clip = trial.suggest_uniform('grad_clip', 0.0, 1.0)
-    optimizer = trial.suggest_categorical('optimizer', ['adam', 'sgd', 'adamw'])
-    scheduler = trial.suggest_categorical('scheduler', ['CosineAnnealing', 'StepLR', 'ExponentialLR'])
-    warmup_steps = trial.suggest_int('warmup_steps', 0, 1000)
-    label_smoothing = trial.suggest_uniform('label_smoothing', 0.0, 0.1)
-    bn_momentum = trial.suggest_uniform('bn_momentum', 0.0, 1.0)
+    # Definisci iperparametri da ottimizzare
+    learning_rate = trial.suggest_loguniform("lr", 1e-5, 1e-3)
+    dropout = trial.suggest_uniform("dropout", 0.1, 0.5)
+    batch_size = trial.suggest_categorical("batch_size", [16, 32, 64])
+    num_layers = trial.suggest_int("num_layers", 2, 5)
+    filters = trial.suggest_categorical("filters", [64, 128, 256])
+    kernel_size = trial.suggest_int("kernel_size", 3, 11, step=2)
 
-    # Aggiorna la configurazione con gli iperparametri scelti
-    cfg.model.optim.lr = lr
-    cfg.model.optim.weight_decay = weight_decay
-    cfg.model.optim.name = optimizer
-    cfg.model.optim.sched = {'name': scheduler, 'warmup_steps': warmup_steps}
-
-    cfg.trainer.gradient_clip_val = grad_clip
-
-    cfg.model.train_ds.batch_size = batch_size
-    cfg.model.validation_ds.batch_size = batch_size
-
-    # Aggiorna l'encoder con il numero di layer e altri parametri
+    # Aggiorna la configurazione solo con i parametri ottimizzati
+    cfg.model.optim.lr = learning_rate
     cfg.model.encoder.jasper = []
     for i in range(num_layers):
-        layer = {
+        cfg.model.encoder.jasper.append({
             'filters': filters,
             'repeat': 1,
             'kernel': [kernel_size],
@@ -53,25 +36,18 @@ def objective(trial):
             'dilation': [1],
             'dropout': dropout,
             'residual': True if i > 0 else False,
-            'activation': activation,
-            'norm_kwargs': {'momentum': bn_momentum}
-        }
-        cfg.model.encoder.jasper.append(layer)
-    # Aggiorna il feat_in dell'encoder e del decoder
-    cfg.model.encoder.feat_in = cfg.model.preprocessor.features
-    cfg.model.decoder.feat_in = filters
+            'activation': 'relu',
+        })
 
-    # Aggiungi label smoothing se supportato
-    cfg.model.loss = {'label_smoothing': label_smoothing}
+    cfg.model.train_ds.batch_size = batch_size
+    cfg.model.validation_ds.batch_size = batch_size
 
     # Disabilita il checkpointing e il logging per velocizzare l'ottimizzazione
     cfg.trainer.enable_checkpointing = False
     cfg.trainer.logger = False
-    cfg.exp_manager.create_checkpoint_callback = False
-    cfg.exp_manager.create_tensorboard_logger = False
 
     # Imposta il numero di epoch per una valutazione rapida
-    cfg.trainer.max_epochs = 10  # Puoi aumentare questo valore se hai più tempo
+    cfg.trainer.max_epochs = 10
 
     # Callback per Early Stopping
     early_stop_callback = EarlyStopping(
@@ -84,17 +60,13 @@ def objective(trial):
     # Configura il trainer
     trainer = pl.Trainer(
         max_epochs=cfg.trainer.max_epochs,
-        accelerator=cfg.trainer.accelerator,
-        devices=cfg.trainer.devices,
+        accelerator="gpu" if torch.cuda.is_available() else "cpu",
+        devices=1,
         logger=False,
         enable_checkpointing=False,
         callbacks=[early_stop_callback],
-        precision=16,  # Abilita la precisione mista per accelerare l'addestramento
-        gradient_clip_val=grad_clip,
+        precision=16  # Abilita precisione mista
     )
-
-    # Configura l'exp_manager
-    exp_manager(trainer, cfg.exp_manager)
 
     # Inizializza il modello
     asr_model = EncDecClassificationModel(cfg=cfg.model)
@@ -103,9 +75,8 @@ def objective(trial):
     asr_model.setup_training_data(train_data_config=cfg.model.train_ds)
     asr_model.setup_validation_data(val_data_config=cfg.model.validation_ds)
 
-    # Aggiungi un try-except per gestire eventuali errori
+    # Training e valutazione
     try:
-        # Avvia l'addestramento
         trainer.fit(asr_model)
     except Exception as e:
         print(f"Errore durante l'addestramento: {e}")
@@ -117,31 +88,30 @@ def objective(trial):
     # Ottieni la metrica da ottimizzare (ad esempio, val_loss)
     val_loss = result[0]['val_loss']
 
-    # Registra la metrica intermedia per Optuna
-    trial.report(val_loss, step=cfg.trainer.max_epochs)
+    # Logging del risultato
+    print(f"Trial {trial.number} - Val Loss: {val_loss}")
 
     # Pruning
     if trial.should_prune():
         raise optuna.exceptions.TrialPruned()
 
-    # Restituisci la metrica per l'ottimizzazione
     return val_loss
 
+
 if __name__ == '__main__':
-    # Imposta la precisione delle moltiplicazioni
+    # Imposta precisione matematica elevata
     torch.set_float32_matmul_precision('high')
 
     # Specifica il percorso per il database SQLite
     storage_name = "sqlite:///asr_study.db"
 
-    # Crea uno studio Optuna con storage persistente e pruner
-    pruner = optuna.pruners.MedianPruner()
+    # Crea uno studio Optuna
     study = optuna.create_study(
         direction='minimize',
         study_name='ASR_Hyperparameter_Optimization',
         storage=storage_name,
         load_if_exists=True,
-        pruner=pruner
+        pruner=optuna.pruners.MedianPruner()
     )
 
     # Esegui l'ottimizzazione

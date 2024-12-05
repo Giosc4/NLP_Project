@@ -1,3 +1,0 @@
-[NeMo W 2024-11-14 15:29:10 nemo_logging:349] /home/giova/miniconda3/envs/NLP/NLP_Project-main/lib/python3.10/site-packages/nemo/collections/asr/parts/preprocessing/features.py:417: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
-      with torch.cuda.amp.autocast(enabled=False):
-    

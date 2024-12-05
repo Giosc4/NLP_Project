@@ -9,7 +9,7 @@ import torch
 import subprocess
 
 # Esegui il primo script di data augmentation
-script1 = '/home/giova/NLP_Project/src/data_augmentation.py'
+script1 = 'data_augmentation.py'
 result1 = subprocess.run(['python3', script1], capture_output=True, text=True)
 print(f"Uscita di {script1}:\n{result1.stdout}")
 if result1.stderr:
@@ -19,11 +19,11 @@ if result1.stderr:
 torch.set_float32_matmul_precision('high')
 
 # Carica il file di configurazione aggiornato
-cfg = OmegaConf.load("/home/giova/NLP_Project/config.yaml")
+cfg = OmegaConf.load("../config.yaml")
 
 # Imposta il manifest per il training e la validazione
-cfg.model.train_ds.manifest_filepath = "/home/giova/NLP_Project/train_manifest_augmented.json"
-cfg.model.validation_ds.manifest_filepath = "/home/giova/NLP_Project/val_manifest.json"
+cfg.model.train_ds.manifest_filepath = "../train_manifest_augmented.json"
+cfg.model.validation_ds.manifest_filepath = "../val_manifest.json"
 
 # Configura il trainer
 trainer = pl.Trainer(
@@ -31,7 +31,7 @@ trainer = pl.Trainer(
     accelerator=cfg.trainer.accelerator,
     devices=cfg.trainer.devices,
     callbacks=[
-        EarlyStopping(monitor="val_epoch_top@1", patience=7, mode="max")
+        EarlyStopping(monitor="val_epoch_top@1", patience=5, mode="min")
     ],
     logger=False
 )

@@ -25,7 +25,7 @@ def create_manifest(data_dir, manifest_path):
                     }
                     manifest_file.write(json.dumps(entry) + '\n')
 
-def split_manifest(manifest_path, train_manifest_path, val_manifest_path, train_split=0.7):
+def split_manifest(manifest_path, train_manifest_path, val_manifest_path, train_split=0.9):
     with open(manifest_path, 'r') as f:
         data = f.readlines()
 
@@ -48,11 +48,11 @@ def split_manifest(manifest_path, train_manifest_path, val_manifest_path, train_
     print(f"Divisione completata: {len(train_data)} campioni per il training, {len(val_data)} campioni per la validazione.")
 
 # Directory dei file audio originali
-data_dir = '/home/giova/NLP_Project/audio'
+data_dir = '../audio'
 # Percorsi per i manifest
-data_manifest_path = '/home/giova/NLP_Project/data_manifest.json'
-train_manifest_path = '/home/giova/NLP_Project/train_manifest.json'
-val_manifest_path = '/home/giova/NLP_Project/val_manifest.json'
+data_manifest_path = '../data_manifest.json'
+train_manifest_path = '../train_manifest.json'
+val_manifest_path = '../val_manifest.json'
 
 # Crea il manifest principale con i dati originali
 create_manifest(data_dir, data_manifest_path)
