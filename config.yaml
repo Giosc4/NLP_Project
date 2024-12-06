@@ -108,7 +108,7 @@ model:
     weight_decay: 0.0001  # Fisso, utile per evitare overfitting
     sched:
       name: "CosineAnnealing"
-      warmup_steps: 100  # Step iniziali per il warm-up del learning rate
+      warmup_steps: 500  # Step iniziali per il warm-up del learning rate
 
 trainer:
   gradient_clip_val: 0.1

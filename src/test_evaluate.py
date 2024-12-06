@@ -63,5 +63,5 @@ def find_best_params_in_logs(directory):
         print("Nessun risultato valido trovato nei file di log nella directory specificata.")
 
 if __name__ == '__main__':
-    directory_path = "/home/giova/NLP_Project/experiments/asr_experiment/2024-11-13_18-06-26"
+    directory_path = "../experiments/asr_experiment/2024-11-13_18-06-26"
     find_best_params_in_logs(directory_path)

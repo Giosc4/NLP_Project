@@ -1,7 +1,10 @@
 import nemo.collections.asr as nemo_asr
+from difflib import SequenceMatcher
+from nemo.collections.asr.metrics.wer import word_error_rate
 import json
 import torch
 import os
+
 
 class ASRInference:
     def __init__(self, model_path, val_manifest, use_gpu=True):
@@ -22,14 +25,21 @@ class ASRInference:
             return [json.loads(line)["audio_filepath"] for line in f]
 
     def transcribe_audio(self):
-        # Performs transcription for the specified audio files
+        # Esegue la trascrizione per i file audio specificati
         transcriptions = []
         with torch.no_grad():
             for audio_path in self.audio_paths:
                 transcription = self.model.transcribe([audio_path])
-                # Print raw model output for debugging
-                print(f"Raw model output for {audio_path}: {transcription}")
-                transcriptions.append(transcription[0])
+                
+                # Converti l'indice in una stringa di etichetta
+                if isinstance(transcription[0], torch.Tensor):
+                    index = transcription[0].item()  # Estrai l'indice dal tensore
+                    predicted_label = self.labels[index] if 0 <= index < len(self.labels) else "indice_non_valido"
+                else:
+                    predicted_label = transcription[0]
+                
+                print(f"Raw model output for {audio_path}: {transcription}, Predicted Label: {predicted_label}")
+                transcriptions.append(predicted_label)
         return transcriptions
 
     def extract_label_from_path(self, path):
@@ -41,78 +51,83 @@ class ASRInference:
         except IndexError:
             print(f"Error extracting label from file: {base}")
             return None
+    
+    def calculate_cer(self, hypotheses, references):
+        """
+        Calcola il CER (Character Error Rate).
+        """
+        total_chars = sum(len(ref) for ref in references)
+        total_errors = sum(
+            len(ref) + len(hyp) - 2 * sum(block.size for block in SequenceMatcher(None, ref, hyp).get_matching_blocks())
+            for ref, hyp in zip(references, hypotheses)
+        )
+        return total_errors / total_chars if total_chars > 0 else 0
 
     def display_results(self):
-        # Prints the transcription results comparing with the correct labels
+        """
+        Mostra i risultati di trascrizione e calcola WER e CER.
+        """
+        print("========================")
+        print("Inizio Trascrizione e Valutazione")
+        print("========================")
+        
+        # Trascrivi gli audio
         transcriptions = self.transcribe_audio()
         correct = []
         incorrect = []
 
-        for path, transcription in zip(self.audio_paths, transcriptions):
+        for idx, (path, transcription) in enumerate(zip(self.audio_paths, transcriptions), start=1):
+            # Estrai il ground truth dall'etichetta
             ground_truth = self.extract_label_from_path(path)
             if ground_truth is None:
                 continue
 
-            # Extract the index from the prediction and map to the label
-            if isinstance(transcription, torch.Tensor):
-                index = transcription.argmax().item()
-                if 0 <= index < len(self.labels):
-                    predicted_label = self.labels[index].lower()
-                else:
-                    predicted_label = "indice_non_valido"
-            elif isinstance(transcription, list) or isinstance(transcription, np.ndarray):
-                index = int(transcription[0])
-                if 0 <= index < len(self.labels):
-                    predicted_label = self.labels[index].lower()
-                else:
-                    predicted_label = "indice_non_valido"
-            elif isinstance(transcription, str):
-                predicted_label = transcription.strip().lower()
-            else:
-                predicted_label = "formato_non_riconosciuto"
+            # Determina il label predetto
+            predicted_label = transcription.lower() if isinstance(transcription, str) else "formato_non_riconosciuto"
 
-            # Compare the prediction with the correct label
+            # Confronta label predetto e ground truth
             if predicted_label == ground_truth:
                 correct.append((path, predicted_label))
             else:
                 incorrect.append((path, ground_truth, predicted_label))
 
-            # Print for debugging
-            print(f"File: {path}")
-            print(f"Ground Truth: {ground_truth}")
-            print(f"Model Prediction: {predicted_label}")
+            # Mostra i risultati per file
+            print(f"File {idx}: {path}")
+            print(f"   Ground Truth: {ground_truth}")
+            print(f"   Prediction:   {predicted_label}")
             print("---------------------------")
 
-        # Calculate the accuracy percentage
+        # Calcola statistiche di accuratezza
         total = len(correct) + len(incorrect)
         accuracy = (len(correct) / total) * 100 if total > 0 else 0
 
-        # Print the results
+        # Mostra statistiche generali
         print("========================")
-        print("Transcription Results")
+        print("Risultati Generali")
         print("========================")
         print(f"Total files analyzed: {total}")
         print(f"Correct predictions: {len(correct)}")
         print(f"Incorrect predictions: {len(incorrect)}")
         print(f"Accuracy percentage: {accuracy:.2f}%\n")
 
-        if correct:
-            print("== Correct Predictions ==")
-            for i, (path, label) in enumerate(correct, 1):
-                print(f"{i}. {path} --> {label}")
-            print("\n")
+        # Carica WER e CER
+        ground_truths = [self.extract_label_from_path(path) for path in self.audio_paths]
+        wer = word_error_rate(hypotheses=transcriptions, references=ground_truths)
+        cer = self.calculate_cer(transcriptions, ground_truths)
 
-        if incorrect:
-            print("== Incorrect Predictions ==")
-            for i, (path, ground, pred) in enumerate(incorrect, 1):
-                print(f"{i}. {path}")
-                print(f"   Correct Label: {ground}")
-                print(f"   Model Prediction: {pred}\n")
+        # Mostra metriche di valutazione
+        print("========================")
+        print("Metriche di Valutazione")
+        print("========================")
+        print(f"Word Error Rate (WER): {wer:.2f}")
+        print(f"Character Error Rate (CER): {cer:.2f}")
+
 
 # Parameters for inference
-model_path = "/home/giova/NLP/NLP_Project-main/asr_model.nemo"
-val_manifest = "/home/giova/NLP/NLP_Project-main/val_manifest.json"
+model_path = "../asr_model.nemo"
+val_manifest = "../val_manifest.json"
 
 # Perform inference
 inference = ASRInference(model_path, val_manifest)
 inference.display_results()
+

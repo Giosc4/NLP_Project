@@ -1,4 +1,5 @@
 import os
+import subprocess
 import librosa
 import numpy as np
 import soundfile as sf
@@ -102,6 +103,13 @@ if __name__ == "__main__":
     input_directory = '../audio'    
     output_directory = '../augmented_audio'
     manifest_path = '../train_manifest_augmented.json'
+
+    # Esegui il primo script di data augmentation
+    script1 = 'manifest.py'
+    result1 = subprocess.run(['python3', script1], capture_output=True, text=True)
+    print(f"Uscita di {script1}:\n{result1.stdout}")
+    if result1.stderr:
+        print(f"Errori di {script1}:\n{result1.stderr}")
     
     # Crea un nuovo manifest o svuota il vecchio
     open(manifest_path, 'w').close()
