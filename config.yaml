@@ -31,10 +31,11 @@ model:
     dither: 0.00001
     stft_conv: false
 
+
   encoder:
     _target_: nemo.collections.asr.modules.ConvASREncoder
     feat_in: 64  # Numero di feature di input del preprocessor
-    activation: relu
+     activation: relu
     conv_mask: true
     jasper:  # Struttura base dell'encoder
       - filters: 256
@@ -112,7 +113,7 @@ model:
 
 trainer:
   gradient_clip_val: 0.1
-  max_epochs: 20  # Configurabile per training rapido durante il tuning
+  max_epochs: 50  # Configurabile per training rapido durante il tuning
   accelerator: "gpu"
   devices: 1
   precision: 16  # Mixed precision per ottimizzare memoria e velocità
