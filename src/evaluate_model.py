@@ -125,6 +125,8 @@ class ASRInference:
 
 # Parameters for inference
 model_path = "../asr_model.nemo"
+print("Model path:", model_path)
+
 val_manifest = "../val_manifest.json"
 
 # Perform inference

@@ -25,27 +25,28 @@ model:
     sample_rate: 16000
     window_stride: 0.01
     window: "hann"
-    features: 64
+    features: 68
     n_fft: 512
     frame_splicing: 1
     dither: 0.00001
     stft_conv: false
 
-
   encoder:
     _target_: nemo.collections.asr.modules.ConvASREncoder
-    feat_in: 64  # Numero di feature di input del preprocessor
-     activation: relu
+    feat_in: 68
+    activation: relu
     conv_mask: true
-    jasper:  # Struttura base dell'encoder
-      - filters: 256
+    jasper:
+      # Strati di base (rimangono invariati)
+      - filters: 64
         repeat: 1
         kernel: [11]
         stride: [1]
         dilation: [1]
         dropout: 0.3
         residual: false
-      - filters: 256
+
+      - filters: 128
         repeat: 1
         kernel: [13]
         stride: [1]
@@ -53,14 +54,33 @@ model:
         dropout: 0.3
         residual: true
 
+      # Layer aggiunti con i migliori iperparametri
+      - filters: 64
+        repeat: 1
+        kernel: [9]
+        stride: [1]
+        dilation: [1]
+        dropout: 0.31912931260383326
+        residual: false
+        activation: relu
+
+      - filters: 64
+        repeat: 1
+        kernel: [9]
+        stride: [1]
+        dilation: [1]
+        dropout: 0.31912931260383326
+        residual: true
+        activation: relu
+
   decoder:
     _target_: nemo.collections.asr.modules.ConvASRDecoderClassification
-    feat_in: 256  # Deve corrispondere al numero di filtri dell'ultimo livello dell'encoder
+    feat_in: 64  # Aggiornato in base all'ultimo layer con filters=64
     num_classes: 14
 
   train_ds:
     manifest_filepath: "/home/giova/NLP/NLP_Project-main/train_manifest_augmented.json"
-    batch_size: 32  # Configurabile tramite Optuna
+    batch_size: 64  # Aggiornato per usare il best param
     shuffle: true
     num_workers: 4
     sample_rate: 16000
@@ -104,27 +124,16 @@ model:
       - esci
 
   optim:
-    name: "adamw"  # Ottimizzatore AdamW
-    lr: 0.0001  # Configurabile tramite Optuna
-    weight_decay: 0.0001  # Fisso, utile per evitare overfitting
+    name: "adamw"
+    lr: 0.000751397140102378  # Aggiornato con il miglior learning rate
+    weight_decay: 0.0001
     sched:
       name: "CosineAnnealing"
-      warmup_steps: 500  # Step iniziali per il warm-up del learning rate
+      warmup_steps: 500
 
 trainer:
   gradient_clip_val: 0.1
-  max_epochs: 50  # Configurabile per training rapido durante il tuning
+  max_epochs: 50
   accelerator: "gpu"
   devices: 1
-  precision: 16  # Mixed precision per ottimizzare memoria e velocità
-
-exp_manager:
-  exp_dir: ./experiments
-  name: asr_experiment
-  create_tensorboard_logger: true
-  create_checkpoint_callback: true
-  checkpoint_callback_params:
-    monitor: val_epoch_top@1
-    mode: max
-    save_top_k: 3
-    filename: 'asr-{epoch:02d}-{val_epoch_top@1:.2f}'
+  precision: 16

@@ -1,23 +1,23 @@
+import time
+start_time = time.time()
+
 import os
 import json
 import pytorch_lightning as pl
 from omegaconf import OmegaConf
 from nemo.collections.asr.models import EncDecClassificationModel
-#from nemo.utils.exp_manager import exp_manager
 from nemo.collections.asr.metrics.wer import word_error_rate
-from pytorch_lightning.callbacks import EarlyStopping
 from difflib import SequenceMatcher
-from pytorch_lightning.callbacks import ModelCheckpoint
 
 import torch
 import subprocess
 
 # Esegui il primo script di data augmentation
-# script1 = 'data_augmentation.py'
-# result1 = subprocess.run(['python3', script1], capture_output=True, text=True)
-# print(f"Uscita di {script1}:\n{result1.stdout}")
-# if result1.stderr:
-#     print(f"Errori di {script1}:\n{result1.stderr}")
+script1 = 'data_augmentation.py'
+result1 = subprocess.run(['python3', script1], capture_output=True, text=True)
+print(f"Uscita di {script1}:\n{result1.stdout}")
+if result1.stderr:
+    print(f"Errori di {script1}:\n{result1.stderr}")
 
 # Imposta alta precisione per le moltiplicazioni
 torch.set_float32_matmul_precision('high')
@@ -106,33 +106,9 @@ trainer = pl.Trainer(
     max_epochs=cfg.trainer.max_epochs,
     accelerator=cfg.trainer.accelerator,
     devices=cfg.trainer.devices,
-    callbacks=[
-        EarlyStopping(monitor="val_epoch_top@1", patience=5, mode="min"),
-        WERandCERCallback(val_manifest=cfg.model.validation_ds.manifest_filepath),
-    ],
+    callbacks=[],
     logger=False
 )
-
-
-checkpoint_callback = ModelCheckpoint(
-    monitor="val_epoch_top@1",
-    mode="max",
-    save_top_k=3,
-    filename='asr-{epoch:02d}-{val_epoch_top@1:.2f}'
-)
-
-trainer = pl.Trainer(
-    max_epochs=cfg.trainer.max_epochs,
-    accelerator=cfg.trainer.accelerator,
-    devices=cfg.trainer.devices,
-    callbacks=[
-        EarlyStopping(monitor="val_epoch_top@1", patience=5, mode="min"),
-        WERandCERCallback(val_manifest=cfg.model.validation_ds.manifest_filepath),
-        checkpoint_callback
-    ],
-    logger=False
-)
-
 
 # Inizializza il modello di classificazione
 asr_model = EncDecClassificationModel(cfg=cfg.model)
@@ -159,3 +135,10 @@ result2 = subprocess.run(['python3', script2], capture_output=True, text=True)
 print(f"Uscita di {script2}:\n{result2.stdout}")
 if result2.stderr:
     print(f"Errori di {script2}:\n{result2.stderr}")
+
+
+# Calcola e stampa il tempo totale
+end_time = time.time()
+elapsed_time = end_time - start_time
+print("---")
+print(f"Tempo totale di esecuzione: {elapsed_time:.2f} secondi")

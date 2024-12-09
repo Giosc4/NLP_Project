@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from nemo.collections.asr.models import ASRModel
 import os
 import uuid
+import shutil
 
 app = Flask(__name__)
 
@@ -17,6 +18,9 @@ labels = [
     "continua", "esci"
 ]
 
+# Directory di destinazione per salvare gli audio
+SAVED_AUDIO_DIR = "./saved_audio"
+os.makedirs(SAVED_AUDIO_DIR, exist_ok=True)  # Crea la cartella se non esiste
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -45,9 +49,10 @@ def predict():
         else:
             command = "Unknown"
 
-        # Rimuovi il file temporaneo
-        os.remove(temp_audio_path)
-        print("File audio temporaneo rimosso.")
+        # Genera un nuovo nome per l'audio da salvare definitivamente
+        saved_audio_path = os.path.join(SAVED_AUDIO_DIR, f"{command}_{uuid.uuid4()}.wav")
+        shutil.move(temp_audio_path, saved_audio_path)
+        print(f"File audio spostato in: {saved_audio_path}")
 
         return jsonify({'command': command})
 
