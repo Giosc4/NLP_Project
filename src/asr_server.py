@@ -22,6 +22,19 @@ labels = [
 SAVED_AUDIO_DIR = "./saved_audio"
 os.makedirs(SAVED_AUDIO_DIR, exist_ok=True)  # Crea la cartella se non esiste
 
+def generate_unique_filename(base_name, extension, directory):
+    """Genera un nome unico per il file nella directory specificata."""
+    counter = 1
+    file_name = f"{base_name}.{extension}"
+    file_path = os.path.join(directory, file_name)
+    
+    while os.path.exists(file_path):
+        file_name = f"{base_name}_{counter}.{extension}"
+        file_path = os.path.join(directory, file_name)
+        counter += 1
+
+    return file_path
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
@@ -50,7 +63,8 @@ def predict():
             command = "Unknown"
 
         # Genera un nuovo nome per l'audio da salvare definitivamente
-        saved_audio_path = os.path.join(SAVED_AUDIO_DIR, f"{command}_{uuid.uuid4()}.wav")
+        base_name = command
+        saved_audio_path = generate_unique_filename(base_name, "wav", SAVED_AUDIO_DIR)
         shutil.move(temp_audio_path, saved_audio_path)
         print(f"File audio spostato in: {saved_audio_path}")
 
