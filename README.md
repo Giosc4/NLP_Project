@@ -3,8 +3,6 @@
 ## **Introduzione**
 Questo progetto implementa un sistema di **Automatic Speech Recognition (ASR)** per riconoscere **comandi vocali in lingua italiana** e tradurli in azioni per controllare un avatar 3D in Unity. L'obiettivo è fornire un'interfaccia vocale naturale e intuitiva, sfruttando tecniche avanzate di ASR e un'integrazione fluida con Unity.
 
-Guarda la demo video su YouTube per vedere il sistema in azione: Demo ASR per Avatar 3D
-
 Guarda la **demo video** su YouTube per vedere il sistema in azione: [Demo ASR per Avatar 3D](https://youtu.be/2o5hHY2TzA8)
 
 ---
