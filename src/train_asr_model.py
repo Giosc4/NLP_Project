@@ -124,7 +124,7 @@ trainer.fit(asr_model)
 trainer.validate(asr_model)
 
 # Salva il modello addestrato
-model_save_path = "../asr_model.nemo"
+model_save_path = "../asr_model2.nemo"
 asr_model.save_to(model_save_path)
 
 print(f"Training completato, modello salvato in {model_save_path}")

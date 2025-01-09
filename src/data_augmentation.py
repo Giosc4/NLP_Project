@@ -86,7 +86,7 @@ def augment_data(input_dir, output_dir, manifest_path, sample_rate=16000):
                 # Lista di tecniche di data augmentation
                 augmentations = [
                     ('_noise', add_background_noise(y)),
-                    ('_timeshift', time_shift(y)),
+                    ('_timeshift', time_shift(y)), 
                     ('_pitch', change_pitch_and_speed(y, sr)),
                     ('_lowpass', apply_lowpass_filter(y, sr)),
                     ('_highpass', apply_highpass_filter(y, sr)),
