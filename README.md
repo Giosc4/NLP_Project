@@ -74,6 +74,7 @@ Se utilizzi **Windows Subsystem for Linux (WSL)** come ambiente, crea un ambient
    ```bash
    pip install -r [library]
    ```
+   ```bash
    flask
    torch
    pytorch-lightning
@@ -84,6 +85,7 @@ Se utilizzi **Windows Subsystem for Linux (WSL)** come ambiente, crea un ambient
    soundfile
    scipy
    ```
+   
 
 ---
 
